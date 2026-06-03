@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.moscow.toilets'
+    compileSdk(35)
+    defaultConfig {
+        applicationId "com.moscow.toilets"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        // Прокидываем ключ MapKit из gradle.properties в BuildConfig
+        buildConfigField "String", "YANDEX_MAPKIT_API_KEY",
+                "\"${project.findProperty('YANDEX_MAPKIT_API_KEY') ?: ''}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.13.0'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Геолокация (FusedLocationProvider)
+    implementation 'com.google.android.gms:play-services-location:21.2.0'
+
+    // Yandex MapKit Mobile SDK (full — с поиском/маршрутами)
+    implementation 'com.yandex.android:maps.mobile:4.7.0-full'
+
+    // JSON (для имитации ответа бэкенда)
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
