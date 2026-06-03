@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Туалеты Москвы</string>
+    <string name="no_location_fallback">Геолокация не разрешена — карта осталась на центре Москвы</string>
+    <string name="location_unavailable">Не удалось определить местоположение</string>
+    <string name="btn_build_route">Построить маршрут</string>
+    <string name="fab_my_location_desc">Моё местоположение</string>
 </resources>

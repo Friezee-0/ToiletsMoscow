@@ -14,7 +14,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         // Репозиторий Yandex MapKit:
-        maven { url "https://maven.google.com" }
+        maven { url "https://maven.yandex.net/repository/mobile-maps/" }
     }
 }
 rootProject.name = "ToiletsMoscow"
