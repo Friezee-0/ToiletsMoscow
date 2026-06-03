@@ -35,6 +35,7 @@ import com.yandex.mapkit.map.MapObjectCollection;
 import com.yandex.mapkit.map.MapObjectTapListener;
 import com.yandex.mapkit.map.PlacemarkMapObject;
 import com.yandex.mapkit.mapview.MapView;
+import com.yandex.mapkit.user_location.UserLocationLayer;
 import com.yandex.runtime.image.ImageProvider;
 
 import java.lang.reflect.Type;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private Map map;
     private MapObjectCollection toiletsCollection;
     private FusedLocationProviderClient fusedLocationClient;
+    private UserLocationLayer userLocationLayer;
 
     private final List<Toilet> allToilets = new ArrayList<>();
     /** Кэш отрендеренных иконок по resId, чтобы не растеризовать вектор на каждый маркер. */
@@ -116,6 +118,12 @@ public class MainActivity extends AppCompatActivity {
         map               = mapView.getMapWindow().getMap();
         toiletsCollection = map.getMapObjects().addCollection();
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        // Встроенный слой геопозиции: синий кружок + кольцо точности
+        userLocationLayer = MapKitFactory.getInstance()
+                .createUserLocationLayer(mapView.getMapWindow());
+        userLocationLayer.setVisible(true);
+        userLocationLayer.setHeadingEnabled(false);
 
         // Стартовая позиция — центр Москвы
         moveCamera(MOSCOW_CENTER, 12f);
