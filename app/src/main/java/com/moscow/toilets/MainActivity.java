@@ -3,6 +3,9 @@ package com.moscow.toilets;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +39,7 @@ import com.yandex.runtime.image.ImageProvider;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -62,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
     private FusedLocationProviderClient fusedLocationClient;
 
     private final List<Toilet> allToilets = new ArrayList<>();
+    /** Кэш отрендеренных иконок по resId, чтобы не растеризовать вектор на каждый маркер. */
+    private final java.util.Map<Integer, ImageProvider> iconCache = new HashMap<>();
     private String activeTypeFilter = null; // null → показать все типы
     private boolean accessibleOnly    = false;
     private Point   userLocation      = null;
@@ -260,16 +266,47 @@ public class MainActivity extends AppCompatActivity {
 
     /** Возвращает иконку нужного цвета в зависимости от типа туалета. */
     private ImageProvider getMarkerIcon(String type) {
-        if (type == null) {
-            return ImageProvider.fromResource(this, R.drawable.ic_marker_default);
-        }
+        int resId = markerResId(type);
+        // ВАЖНО: ImageProvider.fromResource() НЕ умеет рендерить VectorDrawable —
+        // он декодирует ресурс через BitmapFactory, который для XML-вектора
+        // возвращает null, и маркер становится невидимым. Поэтому растеризуем
+        // вектор в Bitmap сами и отдаём через fromBitmap().
+        ImageProvider cached = iconCache.get(resId);
+        if (cached != null) return cached;
+
+        ImageProvider provider = ImageProvider.fromBitmap(vectorToBitmap(resId));
+        iconCache.put(resId, provider);
+        return provider;
+    }
+
+    private int markerResId(String type) {
+        if (type == null) return R.drawable.ic_marker_default;
         switch (type) {
-            case "FREE":   return ImageProvider.fromResource(this, R.drawable.ic_marker_free);
-            case "PAID":   return ImageProvider.fromResource(this, R.drawable.ic_marker_paid);
-            case "TROIKA": return ImageProvider.fromResource(this, R.drawable.ic_marker_troika);
-            case "MALL":   return ImageProvider.fromResource(this, R.drawable.ic_marker_mall);
-            default:       return ImageProvider.fromResource(this, R.drawable.ic_marker_default);
+            case "FREE":   return R.drawable.ic_marker_free;
+            case "PAID":   return R.drawable.ic_marker_paid;
+            case "TROIKA": return R.drawable.ic_marker_troika;
+            case "MALL":   return R.drawable.ic_marker_mall;
+            default:       return R.drawable.ic_marker_default;
         }
+    }
+
+    /** Растеризует векторный (или любой) drawable в Bitmap для Yandex MapKit. */
+    private Bitmap vectorToBitmap(int drawableResId) {
+        Drawable drawable = ContextCompat.getDrawable(this, drawableResId);
+        if (drawable == null) {
+            throw new IllegalArgumentException("Drawable not found: " + drawableResId);
+        }
+        int width  = drawable.getIntrinsicWidth();
+        int height = drawable.getIntrinsicHeight();
+        // На случай отрицательных intrinsic-размеров — дефолт
+        if (width  <= 0) width  = 96;
+        if (height <= 0) height = 128;
+
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        drawable.draw(canvas);
+        return bitmap;
     }
 
     // ================================================================
