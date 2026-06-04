@@ -1,7 +1,9 @@
 package com.moscow.toilets;
 
-/** Модель туалета на клиенте. Маппится из JSON ответа бэкенда через Gson. */
-public class Toilet {
+import java.io.Serializable;
+
+/** Модель туалета. Serializable для передачи через Intent. */
+public class Toilet implements Serializable {
     public long id;
     public String title;
     public String address;
@@ -11,5 +13,5 @@ public class Toilet {
     public Boolean accessible;
     public double rating;
     public String workingHours;
-    public Double distanceMeters; // приходит из /nearby
+    public Double distanceMeters;
 }

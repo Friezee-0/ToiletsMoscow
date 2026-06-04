@@ -4,4 +4,11 @@
     <string name="location_unavailable">Не удалось определить местоположение</string>
     <string name="btn_build_route">Построить маршрут</string>
     <string name="fab_my_location_desc">Моё местоположение</string>
+    <string name="fab_add_desc">Добавить туалет</string>
+    <string name="nav_map">Карта</string>
+    <string name="nav_list">Список</string>
+    <string name="search_hint">Поиск по названию или адресу…</string>
+    <string name="add_toilet_coming_soon">Добавление туалетов — в следующей версии</string>
+    <string name="toilets_nearby">туалетов рядом</string>
+    <string name="no_toilets_found">Ничего не найдено</string>
 </resources>

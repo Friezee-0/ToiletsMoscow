@@ -1,49 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- Карта — на весь экран -->
-    <com.yandex.mapkit.mapview.MapView
-        android:id="@+id/mapview"
+    <!-- Основной контейнер: карта и список занимают всё свободное пространство -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <!-- Чипы-фильтры поверх карты (сверху) -->
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="4dp"
-        android:scrollbars="none"
-        android:background="#CCFFFFFF"
-        android:elevation="4dp">
+        <!-- Карта (всегда в DOM, чтобы MapKit не терял состояние) -->
+        <com.yandex.mapkit.mapview.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroupFilters"
+        <!-- Чипы-фильтры поверх карты (только в режиме карты) -->
+        <HorizontalScrollView
+            android:id="@+id/chipsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:scrollbars="none"
+            android:background="#CCFFFFFF"
+            android:elevation="4dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacingHorizontal="4dp" />
+        </HorizontalScrollView>
+
+        <!-- Режим списка (белый фон поверх карты) -->
+        <LinearLayout
+            android:id="@+id/listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <!-- Строка поиска -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/primary"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="@string/search_hint"
+                    android:hintTextColor="#9E9E9E"
+                    android:textSize="15sp"
+                    android:textColor="#212121"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Счётчик результатов -->
+            <TextView
+                android:id="@+id/tvResultCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                android:textSize="13sp"
+                android:textColor="#757575" />
+
+            <!-- Список туалетов -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+
+        <!-- FAB «Моё местоположение» (только в режиме карты) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMyLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:singleSelection="true"
-            app:selectionRequired="true"
-            app:chipSpacingHorizontal="4dp" />
-    </HorizontalScrollView>
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/fab_my_location_desc"
+            android:src="@drawable/ic_my_location"
+            app:backgroundTint="@color/white"
+            app:tint="@color/primary"
+            app:fabSize="mini"
+            app:elevation="6dp" />
 
-    <!-- FAB «Моё местоположение» — внизу справа -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabMyLocation"
-        android:layout_width="wrap_content"
+        <!-- FAB «Добавить туалет» (всегда виден) -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/fab_add_desc"
+            android:src="@drawable/ic_add_toilet"
+            app:backgroundTint="@color/primary"
+            app:elevation="6dp" />
+
+    </FrameLayout>
+
+    <!-- Нижняя навигация -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/fab_my_location_desc"
-        android:src="@drawable/ic_my_location"
-        app:backgroundTint="@color/white"
-        app:tint="@color/primary"
-        app:elevation="6dp" />
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

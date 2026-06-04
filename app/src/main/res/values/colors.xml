@@ -6,8 +6,12 @@
     <color name="black">#FF000000</color>
 
     <!-- Цвета маркеров по типу туалета -->
-    <color name="marker_free">#43A047</color>    <!-- зелёный   — бесплатный   -->
-    <color name="marker_paid">#E53935</color>    <!-- красный   — платный      -->
-    <color name="marker_troika">#8E24AA</color>  <!-- фиолетовый — по Тройке  -->
-    <color name="marker_mall">#FB8C00</color>    <!-- оранжевый  — в ТЦ       -->
+    <color name="marker_free">#43A047</color>
+    <color name="marker_paid">#E53935</color>
+    <color name="marker_troika">#8E24AA</color>
+    <color name="marker_mall">#FB8C00</color>
+
+    <!-- Цвет иконок нижней навигации -->
+    <color name="nav_item_color_selected">#1E88E5</color>
+    <color name="nav_item_color_unselected">#9E9E9E</color>
 </resources>
