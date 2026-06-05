@@ -4,25 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/bg_screen">
 
-    <!-- Toolbar для карты (настройки) -->
+    <!-- Toolbar для карты -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
+        style="@style/ToolbarLight"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
-        android:elevation="4dp"
-        android:visibility="gone"
-        app:titleTextColor="@color/white" />
+        android:visibility="gone" />
 
-    <!-- Основной контейнер: карта / список занимают всё пространство -->
+    <!-- Основной контейнер -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- Карта (всегда в DOM) -->
+        <!-- Карта -->
         <com.yandex.mapkit.mapview.MapView
             android:id="@+id/mapview"
             android:layout_width="match_parent"
@@ -34,13 +33,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="4dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="6dp"
             android:scrollbars="none"
-            android:background="#CCFFFFFF"
-            android:elevation="4dp">
+            android:background="#E8FAFAF8"
+            android:elevation="3dp">
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGroupFilters"
@@ -57,38 +56,38 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@android:color/white"
+            android:background="@color/bg_screen"
             android:visibility="gone">
 
-            <!-- Шапка с поиском -->
+            <!-- Шапка списка -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:background="@color/primary"
+                android:paddingStart="14dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/bg_toolbar_bottom"
                 android:gravity="center_vertical">
 
                 <EditText
                     android:id="@+id/etSearch"
                     android:layout_width="0dp"
-                    android:layout_height="42dp"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_search"
                     android:paddingStart="16dp"
                     android:paddingEnd="40dp"
                     android:hint="@string/search_hint"
-                    android:hintTextColor="#9E9E9E"
-                    android:textSize="15sp"
-                    android:textColor="#212121"
+                    android:hintTextColor="@color/text_hint"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_primary"
                     android:inputType="text"
                     android:imeOptions="actionSearch"
                     android:singleLine="true" />
 
-                <!-- Кнопка очистки поиска -->
+                <!-- Кнопка очистки -->
                 <ImageButton
                     android:id="@+id/btnClearSearch"
                     android:layout_width="36dp"
@@ -104,24 +103,25 @@
                     android:id="@+id/btnSettings"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="6dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_settings"
+                    android:imageTintList="@color/nav_item_color"
                     android:contentDescription="@string/settings_title" />
 
             </LinearLayout>
 
-            <!-- Счётчик / заголовок -->
+            <!-- Счётчик -->
             <TextView
                 android:id="@+id/tvResultCount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="8dp"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="10dp"
                 android:paddingBottom="4dp"
-                android:textSize="13sp"
-                android:textColor="#757575" />
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
 
             <!-- Список или empty state -->
             <FrameLayout
@@ -135,7 +135,7 @@
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
                     android:paddingTop="4dp"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="10dp" />
 
                 <!-- Пустое состояние -->
                 <LinearLayout
@@ -144,7 +144,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:padding="32dp"
+                    android:padding="36dp"
                     android:visibility="gone">
 
                     <TextView
@@ -152,7 +152,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/empty_icon"
-                        android:textSize="64sp"
+                        android:textSize="60sp"
                         android:gravity="center" />
 
                     <TextView
@@ -161,9 +161,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/empty_title"
-                        android:textSize="18sp"
+                        android:textSize="17sp"
                         android:textStyle="bold"
-                        android:textColor="#424242"
+                        android:textColor="@color/text_primary"
                         android:gravity="center" />
 
                     <TextView
@@ -173,7 +173,7 @@
                         android:layout_marginTop="8dp"
                         android:text="@string/empty_subtitle"
                         android:textSize="14sp"
-                        android:textColor="#9E9E9E"
+                        android:textColor="@color/text_secondary"
                         android:gravity="center" />
 
                 </LinearLayout>
@@ -190,10 +190,10 @@
             android:layout_margin="16dp"
             android:contentDescription="@string/fab_my_location_desc"
             android:src="@drawable/ic_my_location"
-            app:backgroundTint="@color/white"
+            app:backgroundTint="@color/bg_card"
             app:tint="@color/primary"
             app:fabSize="mini"
-            app:elevation="6dp" />
+            app:elevation="4dp" />
 
         <!-- FAB «Добавить туалет» -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -205,7 +205,7 @@
             android:contentDescription="@string/fab_add_desc"
             android:src="@drawable/ic_add_toilet"
             app:backgroundTint="@color/primary"
-            app:elevation="6dp" />
+            app:elevation="4dp" />
 
     </FrameLayout>
 
@@ -214,10 +214,11 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/bg_card"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/nav_item_color"
-        app:itemTextColor="@color/nav_item_color" />
+        app:itemTextColor="@color/nav_item_color"
+        app:elevation="8dp" />
 
 </LinearLayout>

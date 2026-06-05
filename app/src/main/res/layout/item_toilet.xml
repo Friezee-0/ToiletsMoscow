@@ -4,12 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="12dp"
-    android:layout_marginEnd="12dp"
-    android:layout_marginTop="6dp"
-    android:layout_marginBottom="2dp"
-    app:cardElevation="2dp"
-    app:cardCornerRadius="12dp"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="@color/bg_card"
     android:clickable="true"
     android:focusable="true">
 
@@ -22,9 +25,9 @@
         <!-- Цветная полоса по типу -->
         <View
             android:id="@+id/typeStripe"
-            android:layout_width="5dp"
+            android:layout_width="4dp"
             android:layout_height="match_parent"
-            android:background="@color/primary" />
+            android:background="@color/stripe_default" />
 
         <!-- Основная информация -->
         <LinearLayout
@@ -32,25 +35,29 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="12dp">
+            android:paddingStart="14dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp">
 
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="@color/text_primary"
                 android:maxLines="2"
-                android:ellipsize="end" />
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.1" />
 
             <TextView
                 android:id="@+id/tvAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textSize="13sp"
-                android:textColor="#757575"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
                 android:maxLines="1"
                 android:ellipsize="end" />
 
@@ -58,15 +65,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="9dp"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:id="@+id/tvType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
+                    android:paddingStart="9dp"
+                    android:paddingEnd="9dp"
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:textSize="11sp"
@@ -77,8 +84,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:paddingStart="6dp"
-                    android:paddingEnd="6dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
                     android:paddingTop="3dp"
                     android:paddingBottom="3dp"
                     android:text="♿"
@@ -93,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:textSize="12sp"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/text_hint"
                     android:gravity="end" />
 
             </LinearLayout>
@@ -102,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="5dp"
                 android:gravity="center_vertical">
 
                 <RatingBar
@@ -112,15 +119,16 @@
                     android:layout_height="wrap_content"
                     android:numStars="5"
                     android:stepSize="0.5"
-                    android:isIndicator="true" />
+                    android:isIndicator="true"
+                    android:progressTint="@color/rating_star" />
 
                 <TextView
                     android:id="@+id/tvRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
+                    android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    android:textColor="#F57F17" />
+                    android:textColor="@color/rating_star" />
 
                 <TextView
                     android:id="@+id/tvHours"
@@ -128,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="11sp"
-                    android:textColor="#78909C"
+                    android:textColor="@color/text_hint"
                     android:gravity="end"
                     android:maxLines="1"
                     android:ellipsize="end" />
@@ -141,7 +149,7 @@
             android:id="@+id/btnFavorite"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="6dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_favorite_border"
             android:contentDescription="В избранное"

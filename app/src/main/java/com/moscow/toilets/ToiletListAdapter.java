@@ -134,24 +134,24 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
     }
 
     private int typeTextColor(String type) {
-        if (type == null) return 0xFF424242;
+        if (type == null) return 0xFF6A6A6A;
         switch (type) {
-            case "FREE":   return 0xFF2E7D32;
-            case "PAID":   return 0xFFC62828;
-            case "TROIKA": return 0xFF6A1B9A;
-            case "MALL":   return 0xFFE65100;
-            default:       return 0xFF424242;
+            case "FREE":   return 0xFF3D7A44;
+            case "PAID":   return 0xFFA84040;
+            case "TROIKA": return 0xFF5E4BA0;
+            case "MALL":   return 0xFF9A6020;
+            default:       return 0xFF6A6A6A;
         }
     }
 
     private int stripeColor(String type) {
-        if (type == null) return 0xFF1E88E5;
+        if (type == null) return 0xFFA8C4DC;
         switch (type) {
-            case "FREE":   return 0xFF43A047;
-            case "PAID":   return 0xFFE53935;
-            case "TROIKA": return 0xFF8E24AA;
-            case "MALL":   return 0xFFFB8C00;
-            default:       return 0xFF1E88E5;
+            case "FREE":   return 0xFFA2CDA7;
+            case "PAID":   return 0xFFF0A8A8;
+            case "TROIKA": return 0xFFBEB0EE;
+            case "MALL":   return 0xFFF5C98A;
+            default:       return 0xFFA8C4DC;
         }
     }
 

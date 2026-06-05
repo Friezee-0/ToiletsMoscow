@@ -629,13 +629,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int typeBgColor(String type) {
-        if (type == null) return 0xFFE3F2FD;
+        if (type == null) return 0xFFEEECE8;
         switch (type) {
-            case "FREE":   return 0xFFE8F5E9;
-            case "PAID":   return 0xFFFFEBEE;
-            case "TROIKA": return 0xFFF3E5F5;
-            case "MALL":   return 0xFFFFF3E0;
-            default:       return 0xFFE3F2FD;
+            case "FREE":   return 0xFFD6EDDA;
+            case "PAID":   return 0xFFF9DEDE;
+            case "TROIKA": return 0xFFE3DAFF;
+            case "MALL":   return 0xFFFDEBD0;
+            default:       return 0xFFEEECE8;
         }
     }
 
