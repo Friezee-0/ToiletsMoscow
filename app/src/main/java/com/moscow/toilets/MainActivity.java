@@ -246,7 +246,10 @@ public class MainActivity extends AppCompatActivity {
                 if (firstFix) {
                     moveCamera(userLocation, 15f);
                 }
-                applyFiltersAndRender();
+                // На карте маркеры не трогаем — перерисовка clear()+re-add каждые 5 с
+                // вызывает мигание на GL-потоке MapKit. Список обновляем — там важна
+                // сортировка по расстоянию и счётчик в радиусе.
+                if (isListMode || isFavoritesMode) updateList();
             }
         };
     }
@@ -440,8 +443,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return allToilets.stream()
-                // Фильтр по радиусу (если геолокация известна)
-                .filter(t -> userLocation == null
+                // Радиус применяется только в режиме списка.
+                // На карте все маркеры видны всегда — убирать их из-за радиуса
+                // было бы неожиданным поведением при зуме/панировании.
+                .filter(t -> !isListMode
+                        || userLocation == null
                         || t.distanceMeters == null
                         || t.distanceMeters <= searchRadiusMeters)
                 .filter(t -> activeTypeFilter == null || activeTypeFilter.equals(t.type))
