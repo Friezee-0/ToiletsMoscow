@@ -2,12 +2,14 @@ package com.moscow.toilets;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -25,7 +27,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.chip.Chip;
@@ -45,7 +51,9 @@ import com.yandex.mapkit.mapview.MapView;
 import com.yandex.mapkit.user_location.UserLocationLayer;
 import com.yandex.runtime.image.ImageProvider;
 
+import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -86,17 +94,20 @@ public class MainActivity extends AppCompatActivity {
     private boolean isListMode      = false;
     private boolean isFavoritesMode = false;
     private Point   userLocation    = null;
+    private int     searchRadiusMeters = SettingsActivity.DEFAULT_RADIUS;
 
     // Избранное
     private FavoritesManager favoritesManager;
 
-    // Геолокация
+    // Геолокация — непрерывное обновление
     private FusedLocationProviderClient fusedLocationClient;
+    private LocationCallback locationCallback;
+    private boolean locationUpdatesActive = false;
 
     private final ActivityResultLauncher<String> locationPermLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
                 if (granted) {
-                    locateUser();
+                    startLocationUpdates();
                 } else {
                     Toast.makeText(this, getString(R.string.no_location_fallback),
                             Toast.LENGTH_LONG).show();
@@ -134,11 +145,11 @@ public class MainActivity extends AppCompatActivity {
         userLocationLayer.setHeadingEnabled(false);
 
         // Список
-        recyclerView   = findViewById(R.id.recyclerView);
-        tvResultCount  = findViewById(R.id.tvResultCount);
-        listContainer  = findViewById(R.id.listContainer);
-        chipsContainer = findViewById(R.id.chipsContainer);
-        fabMyLocation  = findViewById(R.id.fabMyLocation);
+        recyclerView    = findViewById(R.id.recyclerView);
+        tvResultCount   = findViewById(R.id.tvResultCount);
+        listContainer   = findViewById(R.id.listContainer);
+        chipsContainer  = findViewById(R.id.chipsContainer);
+        fabMyLocation   = findViewById(R.id.fabMyLocation);
         emptyState      = findViewById(R.id.emptyState);
         tvEmptyTitle    = findViewById(R.id.tvEmptyTitle);
         tvEmptySubtitle = findViewById(R.id.tvEmptySubtitle);
@@ -154,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(listAdapter);
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        setupLocationCallback();
 
         moveCamera(MOSCOW_CENTER, 12f);
         setupBottomNav();
@@ -163,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
         setupAddFab();
         setupSettingsButton();
 
-        allToilets.addAll(loadMockToiletsFromBackend());
+        allToilets.addAll(loadToiletsFromAssets());
         applyFiltersAndRender();
 
         requestLocationPermission();
@@ -177,20 +189,103 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        // Перечитываем радиус из настроек
+        SharedPreferences prefs = getSharedPreferences(SettingsActivity.PREFS, MODE_PRIVATE);
+        searchRadiusMeters = prefs.getInt(SettingsActivity.KEY_RADIUS, SettingsActivity.DEFAULT_RADIUS);
+
+        // Возобновляем обновление геолокации
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED && !locationUpdatesActive) {
+            startLocationUpdates();
+        }
+
+        if (isListMode || isFavoritesMode) updateList();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopLocationUpdates();
+    }
+
+    @Override
     protected void onStop() {
         mapView.onStop();
         MapKitFactory.getInstance().onStop();
         super.onStop();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (isListMode || isFavoritesMode) updateList();
+    // ================================================================
+    //  Геолокация — непрерывные обновления
+    // ================================================================
+
+    private void setupLocationCallback() {
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult result) {
+                if (result == null) return;
+                android.location.Location location = result.getLastLocation();
+                if (location == null) return;
+
+                boolean firstFix = (userLocation == null);
+                userLocation = new Point(location.getLatitude(), location.getLongitude());
+
+                // Обновляем расстояния у всех туалетов
+                for (Toilet t : allToilets) {
+                    t.distanceMeters = haversineMeters(
+                            userLocation.getLatitude(), userLocation.getLongitude(),
+                            t.lat, t.lng);
+                }
+                // Сортируем по расстоянию
+                allToilets.sort((a, b) -> Double.compare(
+                        a.distanceMeters != null ? a.distanceMeters : Double.MAX_VALUE,
+                        b.distanceMeters != null ? b.distanceMeters : Double.MAX_VALUE));
+
+                if (firstFix) {
+                    moveCamera(userLocation, 15f);
+                }
+                applyFiltersAndRender();
+            }
+        };
+    }
+
+    private void startLocationUpdates() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) return;
+
+        LocationRequest request = new LocationRequest.Builder(Priority.PRIORITY_BALANCED_POWER_ACCURACY, 5000)
+                .setMinUpdateIntervalMillis(2000)
+                .build();
+
+        fusedLocationClient.requestLocationUpdates(request, locationCallback, Looper.getMainLooper());
+        locationUpdatesActive = true;
+    }
+
+    private void stopLocationUpdates() {
+        if (locationUpdatesActive) {
+            fusedLocationClient.removeLocationUpdates(locationCallback);
+            locationUpdatesActive = false;
+        }
+    }
+
+    private void requestLocationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            startLocationUpdates();
+        } else {
+            locationPermLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+        }
+    }
+
+    private void moveCamera(Point target, float zoom) {
+        map.move(new CameraPosition(target, zoom, 0f, 0f),
+                new Animation(Animation.Type.SMOOTH, 1.2f), null);
     }
 
     // ================================================================
-    //  Нижняя навигация (Карта / Список / Избранное)
+    //  Нижняя навигация
     // ================================================================
 
     private void setupBottomNav() {
@@ -242,53 +337,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  Разрешения
-    // ================================================================
-
-    private void requestLocationPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
-            locateUser();
-        } else {
-            locationPermLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-    }
-
-    // ================================================================
-    //  Геолокация
-    // ================================================================
-
-    private void locateUser() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) return;
-
-        fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
-            if (location != null) {
-                userLocation = new Point(location.getLatitude(), location.getLongitude());
-                for (Toilet t : allToilets) {
-                    t.distanceMeters = haversineMeters(
-                            userLocation.getLatitude(), userLocation.getLongitude(),
-                            t.lat, t.lng);
-                }
-                allToilets.sort((a, b) -> Double.compare(
-                        a.distanceMeters != null ? a.distanceMeters : Double.MAX_VALUE,
-                        b.distanceMeters != null ? b.distanceMeters : Double.MAX_VALUE));
-
-                moveCamera(userLocation, 15f);
-                applyFiltersAndRender();
-            } else {
-                Toast.makeText(this, getString(R.string.location_unavailable),
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void moveCamera(Point target, float zoom) {
-        map.move(new CameraPosition(target, zoom, 0f, 0f),
-                new Animation(Animation.Type.SMOOTH, 1.2f), null);
-    }
-
-    // ================================================================
     //  FAB
     // ================================================================
 
@@ -296,7 +344,8 @@ public class MainActivity extends AppCompatActivity {
         fabMyLocation.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
-                locateUser();
+                if (userLocation != null) moveCamera(userLocation, 15f);
+                else startLocationUpdates();
             } else {
                 requestLocationPermission();
             }
@@ -323,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  Чипы-фильтры (режим карты)
+    //  Чипы-фильтры
     // ================================================================
 
     private void setupFilterChips() {
@@ -358,7 +407,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  Поиск (режим списка)
+    //  Поиск
     // ================================================================
 
     private void setupSearch() {
@@ -389,7 +438,12 @@ public class MainActivity extends AppCompatActivity {
                     .filter(t -> favoritesManager.isFavorite(t.id))
                     .collect(Collectors.toList());
         }
+
         return allToilets.stream()
+                // Фильтр по радиусу (если геолокация известна)
+                .filter(t -> userLocation == null
+                        || t.distanceMeters == null
+                        || t.distanceMeters <= searchRadiusMeters)
                 .filter(t -> activeTypeFilter == null || activeTypeFilter.equals(t.type))
                 .filter(t -> !accessibleOnly  || Boolean.TRUE.equals(t.accessible))
                 .filter(t -> searchQuery.isEmpty()
@@ -421,7 +475,9 @@ public class MainActivity extends AppCompatActivity {
                 tvEmptySubtitle.setText(R.string.empty_favorites_subtitle);
             }
         } else {
-            tvResultCount.setText(filtered.size() + " " + getString(R.string.toilets_nearby));
+            String radiusLabel = formatRadius(searchRadiusMeters);
+            tvResultCount.setText(getString(R.string.toilets_nearby_radius,
+                    filtered.size(), radiusLabel));
             if (isEmpty) {
                 tvEmptyTitle.setText(R.string.empty_title);
                 tvEmptySubtitle.setText(R.string.empty_subtitle);
@@ -488,7 +544,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  BottomSheet (быстрый просмотр при тапе на маркер карты)
+    //  BottomSheet (быстрый просмотр при тапе на маркер)
     // ================================================================
 
     private void showToiletBottomSheet(Toilet toilet) {
@@ -518,10 +574,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvDist = dialog.findViewById(R.id.tvDistance);
         if (tvDist != null) {
-            if (userLocation != null) {
-                double d = haversineMeters(userLocation.getLatitude(), userLocation.getLongitude(),
-                        toilet.lat, toilet.lng);
-                tvDist.setText(formatDistance(d));
+            if (toilet.distanceMeters != null && toilet.distanceMeters > 0) {
+                tvDist.setText(formatDistance(toilet.distanceMeters));
                 tvDist.setVisibility(View.VISIBLE);
             } else {
                 tvDist.setVisibility(View.GONE);
@@ -549,68 +603,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  Маршрут
+    //  Маршрут (по координатам, не по названию)
     // ================================================================
 
     private void openRoute(Toilet t) {
-        Uri appUri = Uri.parse("yandexmaps://maps.yandex.ru/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd");
+        // Яндекс Карты — маршрут до точки по координатам
+        String coordUrl = "yandexmaps://maps.yandex.ru/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd";
+        String webUrl   = "https://yandex.ru/maps/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd";
+
+        Uri appUri = Uri.parse(coordUrl);
         Intent appIntent = new Intent(Intent.ACTION_VIEW, appUri);
         if (appIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(appIntent);
         } else {
-            startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://yandex.ru/maps/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(webUrl)));
         }
     }
 
     // ================================================================
-    //  Данные (имитация GET /api/toilets/nearby)
+    //  Загрузка данных из assets/toilets.json
     // ================================================================
 
-    private List<Toilet> loadMockToiletsFromBackend() {
-        String json = "["
-                + "{\"id\":1,\"title\":\"Парк Зарядье\",\"address\":\"ул. Варварка, 6\","
-                +  "\"lat\":55.7508,\"lng\":37.6291,\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":4.0,\"workingHours\":\"Круглосуточно\"},"
-                + "{\"id\":2,\"title\":\"Александровский сад\",\"address\":\"ул. Воздвиженка, 1\","
-                +  "\"lat\":55.7513,\"lng\":37.6099,\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":3.8,\"workingHours\":\"09:00–21:00\"},"
-                + "{\"id\":3,\"title\":\"Туалет на Красной площади\",\"address\":\"Красная площадь, 1\","
-                +  "\"lat\":55.7539,\"lng\":37.6208,\"type\":\"PAID\",\"accessible\":true,"
-                +  "\"rating\":4.2,\"workingHours\":\"08:00–22:00\"},"
-                + "{\"id\":4,\"title\":\"Арбат (у д. 28)\",\"address\":\"Арбат, 28\","
-                +  "\"lat\":55.7490,\"lng\":37.5893,\"type\":\"PAID\",\"accessible\":false,"
-                +  "\"rating\":3.5,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":5,\"title\":\"Ст. м. Охотный ряд\",\"address\":\"Охотный ряд, вестибюль\","
-                +  "\"lat\":55.7559,\"lng\":37.6144,\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":3.2,\"workingHours\":\"05:30–01:00\"},"
-                + "{\"id\":6,\"title\":\"Ст. м. Китай-город\",\"address\":\"Китай-город, вестибюль\","
-                +  "\"lat\":55.7568,\"lng\":37.6310,\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":3.0,\"workingHours\":\"05:30–01:00\"},"
-                + "{\"id\":7,\"title\":\"ТЦ \\\"Охотный ряд\\\"\",\"address\":\"Манежная пл., 1\","
-                +  "\"lat\":55.7560,\"lng\":37.6140,\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.6,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":8,\"title\":\"ТЦ \\\"Европейский\\\"\",\"address\":\"пл. Киевского вокзала, 2\","
-                +  "\"lat\":55.7447,\"lng\":37.5664,\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.5,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":9,\"title\":\"ГУМ\",\"address\":\"Красная площадь, 3\","
-                +  "\"lat\":55.7549,\"lng\":37.6215,\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.8,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":10,\"title\":\"ТЦ \\\"Атриум\\\"\",\"address\":\"Земляной вал, 33\","
-                +  "\"lat\":55.7493,\"lng\":37.6511,\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.4,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":11,\"title\":\"Парк Горького\",\"address\":\"Крымский вал, 9\","
-                +  "\"lat\":55.7302,\"lng\":37.6030,\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":4.3,\"workingHours\":\"08:00–22:00\"},"
-                + "{\"id\":12,\"title\":\"Воробьёвы горы\",\"address\":\"Воробьёвы горы, 1\","
-                +  "\"lat\":55.7102,\"lng\":37.5430,\"type\":\"FREE\",\"accessible\":false,"
-                +  "\"rating\":3.6,\"workingHours\":\"09:00–20:00\"},"
-                + "{\"id\":13,\"title\":\"Ст. м. Арбатская\",\"address\":\"Арбатская, вестибюль\","
-                +  "\"lat\":55.7516,\"lng\":37.5966,\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":2.9,\"workingHours\":\"05:30–01:00\"}"
-                + "]";
-        Type listType = new TypeToken<List<Toilet>>() {}.getType();
-        return new Gson().fromJson(json, listType);
+    private List<Toilet> loadToiletsFromAssets() {
+        try {
+            InputStream is = getAssets().open("toilets.json");
+            byte[] buffer = new byte[is.available()];
+            //noinspection ResultOfMethodCallIgnored
+            is.read(buffer);
+            is.close();
+            String json = new String(buffer, StandardCharsets.UTF_8);
+            Type listType = new TypeToken<List<Toilet>>() {}.getType();
+            List<Toilet> list = new Gson().fromJson(json, listType);
+            return list != null ? list : new ArrayList<>();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
     }
 
     // ================================================================
@@ -650,7 +677,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String formatDistance(double metres) {
-        if (metres < 1000) return String.format("%.0f м от вас", metres);
-        return String.format("%.1f км от вас", metres / 1000);
+        if (metres < 1000) return String.format(Locale.ROOT, "%.0f м от вас", metres);
+        return String.format(Locale.ROOT, "%.1f км от вас", metres / 1000);
+    }
+
+    private String formatRadius(int metres) {
+        if (metres < 1000) return metres + " м";
+        return (metres / 1000) + " км";
     }
 }
