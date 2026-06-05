@@ -131,6 +131,7 @@ public class ToiletDetailActivity extends AppCompatActivity {
     private void copyToClipboard(String text) {
         if (text == null) return;
         ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        if (cm == null) return;
         cm.setPrimaryClip(ClipData.newPlainText("address", text));
         Snackbar.make(findViewById(android.R.id.content),
                 getString(R.string.address_copied), Snackbar.LENGTH_SHORT).show();

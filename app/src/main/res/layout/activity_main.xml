@@ -80,7 +80,7 @@
                     android:paddingStart="16dp"
                     android:paddingEnd="40dp"
                     android:hint="@string/search_hint"
-                    android:hintTextColor="@color/text_hint"
+                    android:textColorHint="@color/text_hint"
                     android:textSize="14sp"
                     android:textColor="@color/text_primary"
                     android:inputType="text"
@@ -106,7 +106,7 @@
                     android:layout_marginStart="6dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_settings"
-                    android:imageTintList="@color/nav_item_color"
+                    android:tint="@color/nav_item_color"
                     android:contentDescription="@string/settings_title" />
 
             </LinearLayout>
