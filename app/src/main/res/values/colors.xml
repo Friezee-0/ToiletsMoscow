@@ -1,13 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1E88E5</color>
-    <color name="primary_dark">#1565C0</color>
+    <!-- Pastel minimalist palette -->
+    <color name="primary">#8AADCC</color>
+    <color name="primary_dark">#6B93B8</color>
+    <color name="primary_light">#C5DCF0</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
 
-    <!-- Цвета маркеров по типу туалета -->
-    <color name="marker_free">#43A047</color>    <!-- зелёный   — бесплатный   -->
-    <color name="marker_paid">#E53935</color>    <!-- красный   — платный      -->
-    <color name="marker_troika">#8E24AA</color>  <!-- фиолетовый — по Тройке  -->
-    <color name="marker_mall">#FB8C00</color>    <!-- оранжевый  — в ТЦ       -->
+    <!-- Backgrounds -->
+    <color name="bg_screen">#F4F2EE</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_toolbar">#FFFFFF</color>
+    <color name="bg_search">#F0EEE9</color>
+
+    <!-- Text -->
+    <color name="text_primary">#2C2C2C</color>
+    <color name="text_secondary">#8A8A8A</color>
+    <color name="text_hint">#B8B5AE</color>
+
+    <!-- Divider -->
+    <color name="divider">#EEECE8</color>
+
+    <!-- Type badge backgrounds (pastel) -->
+    <color name="bg_free">#D6EDDA</color>
+    <color name="bg_paid">#F9DEDE</color>
+    <color name="bg_troika">#E3DAFF</color>
+    <color name="bg_mall">#FDEBD0</color>
+
+    <!-- Type badge text (muted) -->
+    <color name="text_free">#3D7A44</color>
+    <color name="text_paid">#A84040</color>
+    <color name="text_troika">#5E4BA0</color>
+    <color name="text_mall">#9A6020</color>
+
+    <!-- Accessible badge text reuses text_free -->
+    <color name="text_accessible">#3D7A44</color>
+
+    <!-- Type stripe (left bar on list item) -->
+    <color name="stripe_free">#A2CDA7</color>
+    <color name="stripe_paid">#F0A8A8</color>
+    <color name="stripe_troika">#BEB0EE</color>
+    <color name="stripe_mall">#F5C98A</color>
+    <color name="stripe_default">#A8C4DC</color>
+
+    <!-- Marker colors (kept visible on map) -->
+    <color name="marker_free">#5AAD62</color>
+    <color name="marker_paid">#D96060</color>
+    <color name="marker_troika">#7A62CC</color>
+    <color name="marker_mall">#E09040</color>
+
+    <!-- Rating -->
+    <color name="rating_star">#E8B86D</color>
+
+    <!-- Bottom navigation -->
+    <color name="nav_item_color_selected">#8AADCC</color>
+    <color name="nav_item_color_unselected">#B8B5AE</color>
 </resources>

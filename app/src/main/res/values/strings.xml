@@ -4,4 +4,27 @@
     <string name="location_unavailable">Не удалось определить местоположение</string>
     <string name="btn_build_route">Построить маршрут</string>
     <string name="fab_my_location_desc">Моё местоположение</string>
+    <string name="fab_add_desc">Добавить туалет</string>
+    <string name="nav_map">Карта</string>
+    <string name="nav_list">Список</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="search_hint">Поиск по названию или адресу…</string>
+    <string name="add_toilet_coming_soon">Добавление туалетов — в следующей версии</string>
+    <string name="toilets_nearby">туалетов рядом</string>
+    <string name="no_toilets_found">Ничего не найдено</string>
+    <string name="favorites_count">%d в избранном</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_radius_title">Радиус поиска</string>
+    <string name="settings_radius_subtitle">Туалеты будут показаны в пределах выбранного расстояния</string>
+    <string name="action_favorite">В избранное</string>
+    <string name="remove_from_favorites">Убрать из избранного</string>
+    <string name="action_share">Поделиться</string>
+    <string name="added_to_favorites">Добавлено в избранное</string>
+    <string name="removed_from_favorites">Убрано из избранного</string>
+    <string name="address_copied">Адрес скопирован</string>
+    <string name="empty_icon">🚽</string>
+    <string name="empty_title">Ничего не найдено</string>
+    <string name="empty_subtitle">Попробуйте изменить запрос или фильтры</string>
+    <string name="empty_favorites_title">Нет избранных</string>
+    <string name="empty_favorites_subtitle">Нажмите ★ в списке, чтобы добавить туалет в избранное</string>
 </resources>

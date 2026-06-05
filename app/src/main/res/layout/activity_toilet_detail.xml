@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_screen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarLight"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_toolbar_bottom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- Основная карточка -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/bg_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Тип + доступность -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tvType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvAccessible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="♿ Доступно для МГН"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_free"
+                            android:background="@drawable/bg_type_free"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- Название -->
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:lineSpacingMultiplier="1.15" />
+
+                    <!-- Адрес -->
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary"
+                        android:drawableStart="@null"
+                        android:paddingBottom="2dp" />
+
+                    <!-- Рейтинг -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical">
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="0.5"
+                            android:isIndicator="true"
+                            android:progressTint="@color/rating_star" />
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rating_star" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Карточка: детали -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="14dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/bg_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- График работы -->
+                    <LinearLayout
+                        android:id="@+id/rowHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Часы работы"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:id="@+id/tvHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider" />
+
+                    <!-- Расстояние -->
+                    <LinearLayout
+                        android:id="@+id/rowDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="14dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Расстояние"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:id="@+id/tvDistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Кнопка маршрута -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRoute"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:text="@string/btn_build_route"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:letterSpacing="0.02"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_route"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                app:elevation="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

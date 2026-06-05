@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="3dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/divider"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="@color/bg_card"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Цветная полоса по типу -->
+        <View
+            android:id="@+id/typeStripe"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/stripe_default" />
+
+        <!-- Основная информация -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.1" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="9dp"
+                    android:paddingEnd="9dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAccessible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="♿"
+                    android:textSize="11sp"
+                    android:background="@drawable/bg_type_free"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvDistance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_hint"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:isIndicator="true"
+                    android:progressTint="@color/rating_star" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/rating_star" />
+
+                <TextView
+                    android:id="@+id/tvHours"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_hint"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Кнопка избранного -->
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_favorite_border"
+            android:contentDescription="В избранное"
+            android:scaleType="center" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

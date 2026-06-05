@@ -8,8 +8,12 @@ import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,9 +21,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -42,61 +49,61 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
-/**
- * Главный экран «Туалеты Москвы».
- *
- * 1. Запрашивает runtime-разрешение ACCESS_FINE_LOCATION (ActivityResultLauncher).
- * 2. Определяет координаты устройства и плавно центрирует карту.
- * 3. Отображает туалеты из JSON (имитация GET /api/toilets/nearby) как маркеры
- *    четырёх цветов по типу (FREE/PAID/TROIKA/MALL).
- * 4. По тапу на маркер открывает BottomSheet: адрес, тип, рейтинг,
- *    расписание, расстояние и кнопка маршрута.
- * 5. Фильтрация через ChipGroup вверху экрана.
- * 6. FAB внизу справа для повторного центрирования на пользователе.
- */
 public class MainActivity extends AppCompatActivity {
 
-    /** Центр Москвы — стартовая позиция, пока нет геолокации. */
     private static final Point MOSCOW_CENTER = new Point(55.751244, 37.618423);
 
+    // Карта
     private MapView mapView;
     private Map map;
     private MapObjectCollection toiletsCollection;
-    private FusedLocationProviderClient fusedLocationClient;
     private UserLocationLayer userLocationLayer;
-
-    private final List<Toilet> allToilets = new ArrayList<>();
-    /** Кэш отрендеренных иконок по resId, чтобы не растеризовать вектор на каждый маркер. */
     private final java.util.Map<Integer, ImageProvider> iconCache = new HashMap<>();
-    private String activeTypeFilter = null; // null → показать все типы
-    private boolean accessibleOnly    = false;
-    private Point   userLocation      = null;
 
-    // ----------------------------------------------------------------
-    //  Разрешение геолокации (ActivityResultContract — не deprecated)
-    // ----------------------------------------------------------------
+    // Список
+    private RecyclerView recyclerView;
+    private ToiletListAdapter listAdapter;
+    private TextView tvResultCount;
+    private View emptyState;
+    private EditText etSearch;
+    private ImageButton btnClearSearch;
+
+    // UI-переключатели
+    private View listContainer;
+    private View chipsContainer;
+    private FloatingActionButton fabMyLocation;
+
+    // Данные
+    private final List<Toilet> allToilets = new ArrayList<>();
+    private String activeTypeFilter = null;
+    private boolean accessibleOnly  = false;
+    private String  searchQuery     = "";
+    private boolean isListMode      = false;
+    private boolean isFavoritesMode = false;
+    private Point   userLocation    = null;
+
+    // Избранное
+    private FavoritesManager favoritesManager;
+
+    // Геолокация
+    private FusedLocationProviderClient fusedLocationClient;
 
     private final ActivityResultLauncher<String> locationPermLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
                 if (granted) {
                     locateUser();
                 } else {
-                    Toast.makeText(this,
-                            getString(R.string.no_location_fallback),
+                    Toast.makeText(this, getString(R.string.no_location_fallback),
                             Toast.LENGTH_LONG).show();
                 }
             });
 
-    // ----------------------------------------------------------------
-    //  Слушатель тапов по маркерам; userData каждого маркера — Toilet
-    // ----------------------------------------------------------------
-
     private final MapObjectTapListener markerTapListener = (mapObject, point) -> {
-        Object data = mapObject.getUserData();
-        if (data instanceof Toilet) {
-            showToiletBottomSheet((Toilet) data);
+        if (mapObject.getUserData() instanceof Toilet) {
+            showToiletBottomSheet((Toilet) mapObject.getUserData());
         }
         return true;
     };
@@ -107,34 +114,54 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Ключ и инициализация MapKit — обязательно ДО setContentView
         MapKitFactory.setApiKey(BuildConfig.YANDEX_MAPKIT_API_KEY);
         MapKitFactory.initialize(this);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        favoritesManager = new FavoritesManager(this);
+
+        // Карта
         mapView           = findViewById(R.id.mapview);
         map               = mapView.getMapWindow().getMap();
         toiletsCollection = map.getMapObjects().addCollection();
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-
-        // Встроенный слой геопозиции: синий кружок + кольцо точности
         userLocationLayer = MapKitFactory.getInstance()
                 .createUserLocationLayer(mapView.getMapWindow());
         userLocationLayer.setVisible(true);
         userLocationLayer.setHeadingEnabled(false);
 
-        // Стартовая позиция — центр Москвы
-        moveCamera(MOSCOW_CENTER, 12f);
+        // Список
+        recyclerView   = findViewById(R.id.recyclerView);
+        tvResultCount  = findViewById(R.id.tvResultCount);
+        listContainer  = findViewById(R.id.listContainer);
+        chipsContainer = findViewById(R.id.chipsContainer);
+        fabMyLocation  = findViewById(R.id.fabMyLocation);
+        emptyState     = findViewById(R.id.emptyState);
+        etSearch       = findViewById(R.id.etSearch);
+        btnClearSearch = findViewById(R.id.btnClearSearch);
 
+        listAdapter = new ToiletListAdapter(
+                this::openToiletDetail,
+                favoritesManager,
+                this::onFavoritesChanged
+        );
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(listAdapter);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        moveCamera(MOSCOW_CENTER, 12f);
+        setupBottomNav();
         setupFilterChips();
         setupFab();
+        setupSearch();
+        setupAddFab();
+        setupSettingsButton();
 
         allToilets.addAll(loadMockToiletsFromBackend());
         applyFiltersAndRender();
 
-        // Шаг 1: запросить доступ к геолокации
         requestLocationPermission();
     }
 
@@ -152,8 +179,66 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isListMode || isFavoritesMode) updateList();
+    }
+
     // ================================================================
-    //  1. Runtime-разрешения
+    //  Нижняя навигация (Карта / Список / Избранное)
+    // ================================================================
+
+    private void setupBottomNav() {
+        BottomNavigationView nav = findViewById(R.id.bottomNav);
+        nav.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_map) {
+                showMapMode();
+                return true;
+            } else if (id == R.id.nav_list) {
+                showListMode();
+                return true;
+            } else if (id == R.id.nav_favorites) {
+                showFavoritesMode();
+                return true;
+            }
+            return false;
+        });
+    }
+
+    private void showMapMode() {
+        isListMode = false;
+        isFavoritesMode = false;
+        listContainer.setVisibility(View.GONE);
+        chipsContainer.setVisibility(View.VISIBLE);
+        fabMyLocation.setVisibility(View.VISIBLE);
+    }
+
+    private void showListMode() {
+        isListMode = true;
+        isFavoritesMode = false;
+        listContainer.setVisibility(View.VISIBLE);
+        chipsContainer.setVisibility(View.GONE);
+        fabMyLocation.setVisibility(View.GONE);
+        updateList();
+    }
+
+    private void showFavoritesMode() {
+        isListMode = false;
+        isFavoritesMode = true;
+        listContainer.setVisibility(View.VISIBLE);
+        chipsContainer.setVisibility(View.GONE);
+        fabMyLocation.setVisibility(View.GONE);
+        updateList();
+    }
+
+    private void onFavoritesChanged() {
+        if (isFavoritesMode) updateList();
+    }
+
+    // ================================================================
+    //  Разрешения
     // ================================================================
 
     private void requestLocationPermission() {
@@ -166,41 +251,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  2. Геолокация и плавное центрирование
+    //  Геолокация
     // ================================================================
 
     private void locateUser() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
+                != PackageManager.PERMISSION_GRANTED) return;
+
         fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
             if (location != null) {
                 userLocation = new Point(location.getLatitude(), location.getLongitude());
+                for (Toilet t : allToilets) {
+                    t.distanceMeters = haversineMeters(
+                            userLocation.getLatitude(), userLocation.getLongitude(),
+                            t.lat, t.lng);
+                }
+                allToilets.sort((a, b) -> Double.compare(
+                        a.distanceMeters != null ? a.distanceMeters : Double.MAX_VALUE,
+                        b.distanceMeters != null ? b.distanceMeters : Double.MAX_VALUE));
+
                 moveCamera(userLocation, 15f);
+                applyFiltersAndRender();
             } else {
-                Toast.makeText(this,
-                        getString(R.string.location_unavailable),
+                Toast.makeText(this, getString(R.string.location_unavailable),
                         Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void moveCamera(Point target, float zoom) {
-        map.move(
-                new CameraPosition(target, zoom, 0f, 0f),
-                new Animation(Animation.Type.SMOOTH, 1.2f),
-                null
-        );
+        map.move(new CameraPosition(target, zoom, 0f, 0f),
+                new Animation(Animation.Type.SMOOTH, 1.2f), null);
     }
 
     // ================================================================
-    //  3. FAB «Моё местоположение»
+    //  FAB
     // ================================================================
 
     private void setupFab() {
-        FloatingActionButton fab = findViewById(R.id.fabMyLocation);
-        fab.setOnClickListener(v -> {
+        fabMyLocation.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
                 locateUser();
@@ -210,14 +299,31 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setupAddFab() {
+        FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
+        fabAdd.setOnClickListener(v ->
+                Toast.makeText(this, getString(R.string.add_toilet_coming_soon),
+                        Toast.LENGTH_SHORT).show());
+    }
+
     // ================================================================
-    //  4. Чипы-фильтры
+    //  Настройки
+    // ================================================================
+
+    private void setupSettingsButton() {
+        ImageButton btnSettings = findViewById(R.id.btnSettings);
+        if (btnSettings != null) {
+            btnSettings.setOnClickListener(v ->
+                    startActivity(new Intent(this, SettingsActivity.class)));
+        }
+    }
+
+    // ================================================================
+    //  Чипы-фильтры (режим карты)
     // ================================================================
 
     private void setupFilterChips() {
         ChipGroup chipGroup = findViewById(R.id.chipGroupFilters);
-
-        // Пары: [отображаемое название, внутренний тег]
         String[][] filters = {
                 {"Все",        null},
                 {"Бесплатные", "FREE"},
@@ -226,22 +332,20 @@ public class MainActivity extends AppCompatActivity {
                 {"В ТЦ",       "MALL"},
                 {"Доступные",  "ACCESSIBLE"}
         };
-
         for (int i = 0; i < filters.length; i++) {
             Chip chip = new Chip(this);
             chip.setText(filters[i][0]);
             chip.setCheckable(true);
             chip.setChecked(i == 0);
-
             final String tag = filters[i][1];
             chip.setOnCheckedChangeListener((v, checked) -> {
                 if (!checked) return;
                 if ("ACCESSIBLE".equals(tag)) {
-                    accessibleOnly    = true;
-                    activeTypeFilter  = null;
+                    accessibleOnly   = true;
+                    activeTypeFilter = null;
                 } else {
-                    accessibleOnly    = false;
-                    activeTypeFilter  = tag; // null → «Все»
+                    accessibleOnly   = false;
+                    activeTypeFilter = tag;
                 }
                 applyFiltersAndRender();
             });
@@ -250,38 +354,99 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // ================================================================
-    //  5. Отрисовка маркеров
+    //  Поиск (режим списка)
     // ================================================================
 
-    private void applyFiltersAndRender() {
-        List<Toilet> filtered = allToilets.stream()
+    private void setupSearch() {
+        etSearch.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int st, int c, int a) {}
+            @Override public void onTextChanged(CharSequence s, int st, int b, int c) {}
+            @Override
+            public void afterTextChanged(Editable s) {
+                searchQuery = s.toString().trim().toLowerCase(Locale.ROOT);
+                btnClearSearch.setVisibility(searchQuery.isEmpty() ? View.GONE : View.VISIBLE);
+                updateList();
+            }
+        });
+
+        btnClearSearch.setOnClickListener(v -> {
+            etSearch.setText("");
+            etSearch.clearFocus();
+        });
+    }
+
+    // ================================================================
+    //  Фильтрация и рендер
+    // ================================================================
+
+    private List<Toilet> getFilteredToilets() {
+        if (isFavoritesMode) {
+            return allToilets.stream()
+                    .filter(t -> favoritesManager.isFavorite(t.id))
+                    .collect(Collectors.toList());
+        }
+        return allToilets.stream()
                 .filter(t -> activeTypeFilter == null || activeTypeFilter.equals(t.type))
                 .filter(t -> !accessibleOnly  || Boolean.TRUE.equals(t.accessible))
+                .filter(t -> searchQuery.isEmpty()
+                        || (t.title   != null && t.title.toLowerCase(Locale.ROOT).contains(searchQuery))
+                        || (t.address != null && t.address.toLowerCase(Locale.ROOT).contains(searchQuery)))
                 .collect(Collectors.toList());
-        renderToilets(filtered);
     }
+
+    private void applyFiltersAndRender() {
+        List<Toilet> filtered = getFilteredToilets();
+        renderToilets(filtered);
+        if (isListMode || isFavoritesMode) updateList(filtered);
+    }
+
+    private void updateList() {
+        updateList(getFilteredToilets());
+    }
+
+    private void updateList(List<Toilet> filtered) {
+        listAdapter.submitList(filtered);
+        boolean isEmpty = filtered.isEmpty();
+        recyclerView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
+        emptyState.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
+
+        if (isFavoritesMode) {
+            tvResultCount.setText(getString(R.string.favorites_count, filtered.size()));
+            if (isEmpty) {
+                ((TextView) findViewById(R.id.tvEmptyTitle))
+                        .setText(R.string.empty_favorites_title);
+                ((TextView) findViewById(R.id.tvEmptySubtitle))
+                        .setText(R.string.empty_favorites_subtitle);
+            }
+        } else {
+            tvResultCount.setText(filtered.size() + " " + getString(R.string.toilets_nearby));
+            if (isEmpty) {
+                ((TextView) findViewById(R.id.tvEmptyTitle))
+                        .setText(R.string.empty_title);
+                ((TextView) findViewById(R.id.tvEmptySubtitle))
+                        .setText(R.string.empty_subtitle);
+            }
+        }
+    }
+
+    // ================================================================
+    //  Маркеры на карте
+    // ================================================================
 
     private void renderToilets(List<Toilet> toilets) {
         toiletsCollection.clear();
         for (Toilet t : toilets) {
-            PlacemarkMapObject placemark =
-                    toiletsCollection.addPlacemark(new Point(t.lat, t.lng));
-            placemark.setIcon(getMarkerIcon(t.type));
-            placemark.setUserData(t);
-            placemark.addTapListener(markerTapListener);
+            PlacemarkMapObject p = toiletsCollection.addPlacemark(new Point(t.lat, t.lng));
+            p.setIcon(getMarkerIcon(t.type));
+            p.setUserData(t);
+            p.addTapListener(markerTapListener);
         }
     }
 
-    /** Возвращает иконку нужного цвета в зависимости от типа туалета. */
     private ImageProvider getMarkerIcon(String type) {
         int resId = markerResId(type);
-        // ВАЖНО: ImageProvider.fromResource() НЕ умеет рендерить VectorDrawable —
-        // он декодирует ресурс через BitmapFactory, который для XML-вектора
-        // возвращает null, и маркер становится невидимым. Поэтому растеризуем
-        // вектор в Bitmap сами и отдаём через fromBitmap().
         ImageProvider cached = iconCache.get(resId);
         if (cached != null) return cached;
-
         ImageProvider provider = ImageProvider.fromBitmap(vectorToBitmap(resId));
         iconCache.put(resId, provider);
         return provider;
@@ -298,109 +463,32 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** Растеризует векторный (или любой) drawable в Bitmap для Yandex MapKit. */
     private Bitmap vectorToBitmap(int drawableResId) {
         Drawable drawable = ContextCompat.getDrawable(this, drawableResId);
-        if (drawable == null) {
-            throw new IllegalArgumentException("Drawable not found: " + drawableResId);
-        }
-        int width  = drawable.getIntrinsicWidth();
-        int height = drawable.getIntrinsicHeight();
-        // На случай отрицательных intrinsic-размеров — дефолт
-        if (width  <= 0) width  = 96;
-        if (height <= 0) height = 128;
-
-        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+        if (drawable == null) throw new IllegalArgumentException("Drawable not found: " + drawableResId);
+        int w = drawable.getIntrinsicWidth();
+        int h = drawable.getIntrinsicHeight();
+        if (w <= 0) w = 96;
+        if (h <= 0) h = 128;
+        Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+        drawable.setBounds(0, 0, w, h);
         drawable.draw(canvas);
-        return bitmap;
+        return bmp;
     }
 
     // ================================================================
-    //  6. Тестовые данные (имитация GET /api/toilets/nearby)
-    //     В боевом приложении здесь будет Retrofit / OkHttp запрос.
+    //  Открытие детального экрана
     // ================================================================
 
-    private List<Toilet> loadMockToiletsFromBackend() {
-        String json = "["
-                // ── Бесплатные ──────────────────────────────────────────
-                + "{\"id\":1,\"title\":\"Парк Зарядье\","
-                +  "\"address\":\"ул. Варварка, 6\","
-                +  "\"lat\":55.7508,\"lng\":37.6291,"
-                +  "\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":4.0,\"workingHours\":\"Круглосуточно\"},"
-                + "{\"id\":2,\"title\":\"Александровский сад\","
-                +  "\"address\":\"ул. Воздвиженка, 1\","
-                +  "\"lat\":55.7513,\"lng\":37.6099,"
-                +  "\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":3.8,\"workingHours\":\"09:00–21:00\"},"
-                + "{\"id\":11,\"title\":\"Парк Горького\","
-                +  "\"address\":\"Крымский вал, 9\","
-                +  "\"lat\":55.7302,\"lng\":37.6030,"
-                +  "\"type\":\"FREE\",\"accessible\":true,"
-                +  "\"rating\":4.3,\"workingHours\":\"08:00–22:00\"},"
-                + "{\"id\":12,\"title\":\"Воробьёвы горы (смотровая)\","
-                +  "\"address\":\"Воробьёвы горы, 1\","
-                +  "\"lat\":55.7102,\"lng\":37.5430,"
-                +  "\"type\":\"FREE\",\"accessible\":false,"
-                +  "\"rating\":3.6,\"workingHours\":\"09:00–20:00\"},"
-                // ── Платные ─────────────────────────────────────────────
-                + "{\"id\":3,\"title\":\"Туалет на Красной площади\","
-                +  "\"address\":\"Красная площадь, 1\","
-                +  "\"lat\":55.7539,\"lng\":37.6208,"
-                +  "\"type\":\"PAID\",\"accessible\":true,"
-                +  "\"rating\":4.2,\"workingHours\":\"08:00–22:00\"},"
-                + "{\"id\":4,\"title\":\"Арбат (у д. 28)\","
-                +  "\"address\":\"Арбат, 28\","
-                +  "\"lat\":55.7490,\"lng\":37.5893,"
-                +  "\"type\":\"PAID\",\"accessible\":false,"
-                +  "\"rating\":3.5,\"workingHours\":\"10:00–22:00\"},"
-                // ── По Тройке ───────────────────────────────────────────
-                + "{\"id\":5,\"title\":\"Ст. м. Охотный ряд\","
-                +  "\"address\":\"Охотный ряд, вестибюль\","
-                +  "\"lat\":55.7559,\"lng\":37.6144,"
-                +  "\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":3.2,\"workingHours\":\"05:30–01:00\"},"
-                + "{\"id\":6,\"title\":\"Ст. м. Китай-город\","
-                +  "\"address\":\"Китай-город, вестибюль\","
-                +  "\"lat\":55.7568,\"lng\":37.6310,"
-                +  "\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":3.0,\"workingHours\":\"05:30–01:00\"},"
-                + "{\"id\":13,\"title\":\"Ст. м. Арбатская\","
-                +  "\"address\":\"Арбатская, вестибюль\","
-                +  "\"lat\":55.7516,\"lng\":37.5966,"
-                +  "\"type\":\"TROIKA\",\"accessible\":false,"
-                +  "\"rating\":2.9,\"workingHours\":\"05:30–01:00\"},"
-                // ── В ТЦ ────────────────────────────────────────────────
-                + "{\"id\":7,\"title\":\"ТЦ \\\"Охотный ряд\\\"\","
-                +  "\"address\":\"Манежная пл., 1\","
-                +  "\"lat\":55.7560,\"lng\":37.6140,"
-                +  "\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.6,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":8,\"title\":\"ТЦ \\\"Европейский\\\"\","
-                +  "\"address\":\"пл. Киевского вокзала, 2\","
-                +  "\"lat\":55.7447,\"lng\":37.5664,"
-                +  "\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.5,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":9,\"title\":\"ГУМ\","
-                +  "\"address\":\"Красная площадь, 3\","
-                +  "\"lat\":55.7549,\"lng\":37.6215,"
-                +  "\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.8,\"workingHours\":\"10:00–22:00\"},"
-                + "{\"id\":10,\"title\":\"ТЦ \\\"Атриум\\\"\","
-                +  "\"address\":\"Земляной вал, 33\","
-                +  "\"lat\":55.7493,\"lng\":37.6511,"
-                +  "\"type\":\"MALL\",\"accessible\":true,"
-                +  "\"rating\":4.4,\"workingHours\":\"10:00–22:00\"}"
-                + "]";
-
-        Type listType = new TypeToken<List<Toilet>>() {}.getType();
-        return new Gson().fromJson(json, listType);
+    private void openToiletDetail(Toilet toilet) {
+        Intent intent = new Intent(this, ToiletDetailActivity.class);
+        intent.putExtra(ToiletDetailActivity.EXTRA_TOILET, toilet);
+        startActivity(intent);
     }
 
     // ================================================================
-    //  7. BottomSheet с детальной информацией + маршрут
+    //  BottomSheet (быстрый просмотр при тапе на маркер карты)
     // ================================================================
 
     private void showToiletBottomSheet(Toilet toilet) {
@@ -410,22 +498,17 @@ public class MainActivity extends AppCompatActivity {
         bindText(dialog, R.id.tvTitle,   toilet.title);
         bindText(dialog, R.id.tvAddress, toilet.address);
 
-        // Тип + доступность
         TextView tvType = dialog.findViewById(R.id.tvType);
         if (tvType != null) {
-            String typeStr = typeRu(toilet.type);
-            if (Boolean.TRUE.equals(toilet.accessible)) typeStr += "  ♿";
-            tvType.setText(typeStr);
+            String s = typeRu(toilet.type);
+            if (Boolean.TRUE.equals(toilet.accessible)) s += "  ♿";
+            tvType.setText(s);
             tvType.setBackgroundColor(typeBgColor(toilet.type));
         }
 
-        // Рейтинг
         TextView tvRating = dialog.findViewById(R.id.tvRating);
-        if (tvRating != null) {
-            tvRating.setText(String.format("%.1f ★", toilet.rating));
-        }
+        if (tvRating != null) tvRating.setText(String.format("%.1f ★", toilet.rating));
 
-        // График работы
         TextView tvHours = dialog.findViewById(R.id.tvWorkingHours);
         if (tvHours != null) {
             boolean hasHours = toilet.workingHours != null && !toilet.workingHours.isEmpty();
@@ -433,54 +516,101 @@ public class MainActivity extends AppCompatActivity {
             if (hasHours) tvHours.setText(toilet.workingHours);
         }
 
-        // Расстояние (только если известно местоположение пользователя)
         TextView tvDist = dialog.findViewById(R.id.tvDistance);
         if (tvDist != null) {
             if (userLocation != null) {
-                double metres = haversineMeters(
-                        userLocation.getLatitude(), userLocation.getLongitude(),
+                double d = haversineMeters(userLocation.getLatitude(), userLocation.getLongitude(),
                         toilet.lat, toilet.lng);
-                tvDist.setText(formatDistance(metres));
+                tvDist.setText(formatDistance(d));
                 tvDist.setVisibility(View.VISIBLE);
             } else {
                 tvDist.setVisibility(View.GONE);
             }
         }
 
-        // Кнопка маршрута
         Button btnRoute = dialog.findViewById(R.id.btnRoute);
-        if (btnRoute != null) {
-            btnRoute.setOnClickListener(v -> {
-                openRoute(toilet);
-                dialog.dismiss();
-            });
-        }
+        if (btnRoute != null) btnRoute.setOnClickListener(v -> {
+            openRoute(toilet);
+            dialog.dismiss();
+        });
+
+        View btnDetail = dialog.findViewById(R.id.btnDetail);
+        if (btnDetail != null) btnDetail.setOnClickListener(v -> {
+            openToiletDetail(toilet);
+            dialog.dismiss();
+        });
 
         dialog.show();
     }
 
     private void bindText(BottomSheetDialog d, int viewId, String text) {
         TextView tv = d.findViewById(viewId);
-        if (tv != null) tv.setText(text);
+        if (tv != null) tv.setText(text != null ? text : "");
     }
 
     // ================================================================
-    //  8. Построение маршрута (Яндекс.Карты → браузер как fallback)
+    //  Маршрут
     // ================================================================
 
     private void openRoute(Toilet t) {
-        // yandexmaps deep-link (пешеход)
-        Uri appUri = Uri.parse("yandexmaps://maps.yandex.ru/?rtext=~"
-                + t.lat + "," + t.lng + "&rtt=pd");
+        Uri appUri = Uri.parse("yandexmaps://maps.yandex.ru/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd");
         Intent appIntent = new Intent(Intent.ACTION_VIEW, appUri);
         if (appIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(appIntent);
         } else {
-            // Fallback: веб-версия Яндекс.Карт
-            Uri webUri = Uri.parse("https://yandex.ru/maps/?rtext=~"
-                    + t.lat + "," + t.lng + "&rtt=pd");
-            startActivity(new Intent(Intent.ACTION_VIEW, webUri));
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://yandex.ru/maps/?rtext=~" + t.lat + "," + t.lng + "&rtt=pd")));
         }
+    }
+
+    // ================================================================
+    //  Данные (имитация GET /api/toilets/nearby)
+    // ================================================================
+
+    private List<Toilet> loadMockToiletsFromBackend() {
+        String json = "["
+                + "{\"id\":1,\"title\":\"Парк Зарядье\",\"address\":\"ул. Варварка, 6\","
+                +  "\"lat\":55.7508,\"lng\":37.6291,\"type\":\"FREE\",\"accessible\":true,"
+                +  "\"rating\":4.0,\"workingHours\":\"Круглосуточно\"},"
+                + "{\"id\":2,\"title\":\"Александровский сад\",\"address\":\"ул. Воздвиженка, 1\","
+                +  "\"lat\":55.7513,\"lng\":37.6099,\"type\":\"FREE\",\"accessible\":true,"
+                +  "\"rating\":3.8,\"workingHours\":\"09:00–21:00\"},"
+                + "{\"id\":3,\"title\":\"Туалет на Красной площади\",\"address\":\"Красная площадь, 1\","
+                +  "\"lat\":55.7539,\"lng\":37.6208,\"type\":\"PAID\",\"accessible\":true,"
+                +  "\"rating\":4.2,\"workingHours\":\"08:00–22:00\"},"
+                + "{\"id\":4,\"title\":\"Арбат (у д. 28)\",\"address\":\"Арбат, 28\","
+                +  "\"lat\":55.7490,\"lng\":37.5893,\"type\":\"PAID\",\"accessible\":false,"
+                +  "\"rating\":3.5,\"workingHours\":\"10:00–22:00\"},"
+                + "{\"id\":5,\"title\":\"Ст. м. Охотный ряд\",\"address\":\"Охотный ряд, вестибюль\","
+                +  "\"lat\":55.7559,\"lng\":37.6144,\"type\":\"TROIKA\",\"accessible\":false,"
+                +  "\"rating\":3.2,\"workingHours\":\"05:30–01:00\"},"
+                + "{\"id\":6,\"title\":\"Ст. м. Китай-город\",\"address\":\"Китай-город, вестибюль\","
+                +  "\"lat\":55.7568,\"lng\":37.6310,\"type\":\"TROIKA\",\"accessible\":false,"
+                +  "\"rating\":3.0,\"workingHours\":\"05:30–01:00\"},"
+                + "{\"id\":7,\"title\":\"ТЦ \\\"Охотный ряд\\\"\",\"address\":\"Манежная пл., 1\","
+                +  "\"lat\":55.7560,\"lng\":37.6140,\"type\":\"MALL\",\"accessible\":true,"
+                +  "\"rating\":4.6,\"workingHours\":\"10:00–22:00\"},"
+                + "{\"id\":8,\"title\":\"ТЦ \\\"Европейский\\\"\",\"address\":\"пл. Киевского вокзала, 2\","
+                +  "\"lat\":55.7447,\"lng\":37.5664,\"type\":\"MALL\",\"accessible\":true,"
+                +  "\"rating\":4.5,\"workingHours\":\"10:00–22:00\"},"
+                + "{\"id\":9,\"title\":\"ГУМ\",\"address\":\"Красная площадь, 3\","
+                +  "\"lat\":55.7549,\"lng\":37.6215,\"type\":\"MALL\",\"accessible\":true,"
+                +  "\"rating\":4.8,\"workingHours\":\"10:00–22:00\"},"
+                + "{\"id\":10,\"title\":\"ТЦ \\\"Атриум\\\"\",\"address\":\"Земляной вал, 33\","
+                +  "\"lat\":55.7493,\"lng\":37.6511,\"type\":\"MALL\",\"accessible\":true,"
+                +  "\"rating\":4.4,\"workingHours\":\"10:00–22:00\"},"
+                + "{\"id\":11,\"title\":\"Парк Горького\",\"address\":\"Крымский вал, 9\","
+                +  "\"lat\":55.7302,\"lng\":37.6030,\"type\":\"FREE\",\"accessible\":true,"
+                +  "\"rating\":4.3,\"workingHours\":\"08:00–22:00\"},"
+                + "{\"id\":12,\"title\":\"Воробьёвы горы\",\"address\":\"Воробьёвы горы, 1\","
+                +  "\"lat\":55.7102,\"lng\":37.5430,\"type\":\"FREE\",\"accessible\":false,"
+                +  "\"rating\":3.6,\"workingHours\":\"09:00–20:00\"},"
+                + "{\"id\":13,\"title\":\"Ст. м. Арбатская\",\"address\":\"Арбатская, вестибюль\","
+                +  "\"lat\":55.7516,\"lng\":37.5966,\"type\":\"TROIKA\",\"accessible\":false,"
+                +  "\"rating\":2.9,\"workingHours\":\"05:30–01:00\"}"
+                + "]";
+        Type listType = new TypeToken<List<Toilet>>() {}.getType();
+        return new Gson().fromJson(json, listType);
     }
 
     // ================================================================
@@ -498,19 +628,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /** Мягкий фоновый цвет бейджа типа. */
     private int typeBgColor(String type) {
-        if (type == null) return 0xFFE3F2FD;
+        if (type == null) return 0xFFEEECE8;
         switch (type) {
-            case "FREE":   return 0xFFE8F5E9; // light green
-            case "PAID":   return 0xFFFFEBEE; // light red
-            case "TROIKA": return 0xFFF3E5F5; // light purple
-            case "MALL":   return 0xFFFFF3E0; // light orange
-            default:       return 0xFFE3F2FD; // light blue
+            case "FREE":   return 0xFFD6EDDA;
+            case "PAID":   return 0xFFF9DEDE;
+            case "TROIKA": return 0xFFE3DAFF;
+            case "MALL":   return 0xFFFDEBD0;
+            default:       return 0xFFEEECE8;
         }
     }
 
-    /** Расстояние по формуле Хаверсина (в метрах). */
     private double haversineMeters(double lat1, double lon1, double lat2, double lon2) {
         final double R = 6_371_000.0;
         double dLat = Math.toRadians(lat2 - lat1);
@@ -522,9 +650,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String formatDistance(double metres) {
-        if (metres < 1000) {
-            return String.format("%.0f м от вас", metres);
-        }
+        if (metres < 1000) return String.format("%.0f м от вас", metres);
         return String.format("%.1f км от вас", metres / 1000);
     }
 }

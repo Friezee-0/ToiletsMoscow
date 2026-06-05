@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_screen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarLight"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_toolbar_bottom" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/divider"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/bg_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_radius_title"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_radius_subtitle"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="14dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgRadius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioButton android:id="@+id/rb500"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:text="500 м"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:gravity="center_vertical"
+                            android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rb1000"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:text="1 км"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:gravity="center_vertical"
+                            android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rb2000"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:text="2 км (по умолчанию)"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:gravity="center_vertical"
+                            android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rb5000"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:text="5 км"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:gravity="center_vertical"
+                            android:buttonTint="@color/primary" />
+
+                        <RadioButton android:id="@+id/rb10000"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:text="10 км"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_primary"
+                            android:gravity="center_vertical"
+                            android:buttonTint="@color/primary" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
