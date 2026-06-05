@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ToiletListAdapter listAdapter;
     private TextView tvResultCount;
+    private TextView tvEmptyTitle;
+    private TextView tvEmptySubtitle;
     private View emptyState;
     private EditText etSearch;
     private ImageButton btnClearSearch;
@@ -137,9 +139,11 @@ public class MainActivity extends AppCompatActivity {
         listContainer  = findViewById(R.id.listContainer);
         chipsContainer = findViewById(R.id.chipsContainer);
         fabMyLocation  = findViewById(R.id.fabMyLocation);
-        emptyState     = findViewById(R.id.emptyState);
-        etSearch       = findViewById(R.id.etSearch);
-        btnClearSearch = findViewById(R.id.btnClearSearch);
+        emptyState      = findViewById(R.id.emptyState);
+        tvEmptyTitle    = findViewById(R.id.tvEmptyTitle);
+        tvEmptySubtitle = findViewById(R.id.tvEmptySubtitle);
+        etSearch        = findViewById(R.id.etSearch);
+        btnClearSearch  = findViewById(R.id.btnClearSearch);
 
         listAdapter = new ToiletListAdapter(
                 this::openToiletDetail,
@@ -413,18 +417,14 @@ public class MainActivity extends AppCompatActivity {
         if (isFavoritesMode) {
             tvResultCount.setText(getString(R.string.favorites_count, filtered.size()));
             if (isEmpty) {
-                ((TextView) findViewById(R.id.tvEmptyTitle))
-                        .setText(R.string.empty_favorites_title);
-                ((TextView) findViewById(R.id.tvEmptySubtitle))
-                        .setText(R.string.empty_favorites_subtitle);
+                tvEmptyTitle.setText(R.string.empty_favorites_title);
+                tvEmptySubtitle.setText(R.string.empty_favorites_subtitle);
             }
         } else {
             tvResultCount.setText(filtered.size() + " " + getString(R.string.toilets_nearby));
             if (isEmpty) {
-                ((TextView) findViewById(R.id.tvEmptyTitle))
-                        .setText(R.string.empty_title);
-                ((TextView) findViewById(R.id.tvEmptySubtitle))
-                        .setText(R.string.empty_subtitle);
+                tvEmptyTitle.setText(R.string.empty_title);
+                tvEmptySubtitle.setText(R.string.empty_subtitle);
             }
         }
     }
