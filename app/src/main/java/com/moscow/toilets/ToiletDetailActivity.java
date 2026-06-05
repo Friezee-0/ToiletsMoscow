@@ -1,28 +1,40 @@
 package com.moscow.toilets;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class ToiletDetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_TOILET = "toilet";
+
+    private Toilet toilet;
+    private FavoritesManager favoritesManager;
+    private MenuItem favoriteMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toilet_detail);
 
-        Toilet toilet = (Toilet) getIntent().getSerializableExtra(EXTRA_TOILET);
+        toilet = (Toilet) getIntent().getSerializableExtra(EXTRA_TOILET);
         if (toilet == null) { finish(); return; }
+
+        favoritesManager = new FavoritesManager(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -32,6 +44,43 @@ public class ToiletDetailActivity extends AppCompatActivity {
         }
         toolbar.setNavigationOnClickListener(v -> finish());
 
+        bindViews();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_detail, menu);
+        favoriteMenuItem = menu.findItem(R.id.action_favorite);
+        updateFavoriteIcon();
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_favorite) {
+            favoritesManager.toggle(toilet.id);
+            updateFavoriteIcon();
+            boolean now = favoritesManager.isFavorite(toilet.id);
+            Snackbar.make(findViewById(android.R.id.content),
+                    now ? getString(R.string.added_to_favorites) : getString(R.string.removed_from_favorites),
+                    Snackbar.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.action_share) {
+            shareToilet();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void updateFavoriteIcon() {
+        if (favoriteMenuItem == null) return;
+        boolean fav = favoritesManager.isFavorite(toilet.id);
+        favoriteMenuItem.setIcon(fav ? R.drawable.ic_favorite : R.drawable.ic_favorite_border);
+        favoriteMenuItem.setTitle(fav ? R.string.remove_from_favorites : R.string.action_favorite);
+    }
+
+    private void bindViews() {
         // Тип
         TextView tvType = findViewById(R.id.tvType);
         tvType.setText(typeRu(toilet.type));
@@ -42,9 +91,14 @@ public class ToiletDetailActivity extends AppCompatActivity {
         TextView tvAccessible = findViewById(R.id.tvAccessible);
         tvAccessible.setVisibility(Boolean.TRUE.equals(toilet.accessible) ? View.VISIBLE : View.GONE);
 
-        // Название и адрес
-        setText(R.id.tvTitle,   toilet.title);
-        setText(R.id.tvAddress, toilet.address);
+        setText(R.id.tvTitle, toilet.title);
+
+        // Адрес с копированием по тапу
+        TextView tvAddress = findViewById(R.id.tvAddress);
+        if (tvAddress != null) {
+            tvAddress.setText(toilet.address);
+            tvAddress.setOnClickListener(v -> copyToClipboard(toilet.address));
+        }
 
         // Рейтинг
         RatingBar ratingBar = findViewById(R.id.ratingBar);
@@ -56,31 +110,52 @@ public class ToiletDetailActivity extends AppCompatActivity {
         if (hasHours) {
             setText(R.id.tvHours, toilet.workingHours);
         } else {
-            findViewById(R.id.rowHours).setVisibility(View.GONE);
-            findViewById(R.id.divHours).setVisibility(View.GONE);
+            View rowHours = findViewById(R.id.rowHours);
+            View divHours = findViewById(R.id.divHours);
+            if (rowHours != null) rowHours.setVisibility(View.GONE);
+            if (divHours != null) divHours.setVisibility(View.GONE);
         }
 
         // Расстояние
         if (toilet.distanceMeters != null && toilet.distanceMeters > 0) {
             setText(R.id.tvDistance, formatDistance(toilet.distanceMeters));
-            findViewById(R.id.rowDistance).setVisibility(View.VISIBLE);
+            View rowDist = findViewById(R.id.rowDistance);
+            if (rowDist != null) rowDist.setVisibility(View.VISIBLE);
         }
 
         // Маршрут
         MaterialButton btnRoute = findViewById(R.id.btnRoute);
-        btnRoute.setOnClickListener(v -> openRoute(toilet));
+        btnRoute.setOnClickListener(v -> openRoute());
     }
 
-    private void openRoute(Toilet t) {
+    private void copyToClipboard(String text) {
+        if (text == null) return;
+        ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        cm.setPrimaryClip(ClipData.newPlainText("address", text));
+        Snackbar.make(findViewById(android.R.id.content),
+                getString(R.string.address_copied), Snackbar.LENGTH_SHORT).show();
+    }
+
+    private void shareToilet() {
+        String text = toilet.title + "\n"
+                + toilet.address + "\n"
+                + "https://yandex.ru/maps/?pt=" + toilet.lng + "," + toilet.lat
+                + "&z=17&l=map";
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, text);
+        startActivity(Intent.createChooser(shareIntent, getString(R.string.action_share)));
+    }
+
+    private void openRoute() {
         Uri appUri = Uri.parse("yandexmaps://maps.yandex.ru/?rtext=~"
-                + t.lat + "," + t.lng + "&rtt=pd");
+                + toilet.lat + "," + toilet.lng + "&rtt=pd");
         Intent appIntent = new Intent(Intent.ACTION_VIEW, appUri);
         if (appIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(appIntent);
         } else {
-            Uri webUri = Uri.parse("https://yandex.ru/maps/?rtext=~"
-                    + t.lat + "," + t.lng + "&rtt=pd");
-            startActivity(new Intent(Intent.ACTION_VIEW, webUri));
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://yandex.ru/maps/?rtext=~" + toilet.lat + "," + toilet.lng + "&rtt=pd")));
         }
     }
 

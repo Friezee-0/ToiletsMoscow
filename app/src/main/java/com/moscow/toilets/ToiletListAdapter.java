@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -20,10 +21,16 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
     }
 
     private final List<Toilet> items = new ArrayList<>();
-    private final OnToiletClickListener listener;
+    private final OnToiletClickListener clickListener;
+    private final FavoritesManager      favoritesManager;
+    private final Runnable               onFavoritesChanged;
 
-    public ToiletListAdapter(OnToiletClickListener listener) {
-        this.listener = listener;
+    public ToiletListAdapter(OnToiletClickListener clickListener,
+                              FavoritesManager favoritesManager,
+                              Runnable onFavoritesChanged) {
+        this.clickListener      = clickListener;
+        this.favoritesManager   = favoritesManager;
+        this.onFavoritesChanged = onFavoritesChanged;
     }
 
     public void submitList(List<Toilet> toilets) {
@@ -50,24 +57,14 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
         h.tvRating.setText(String.format("%.1f", t.rating));
         h.tvHours.setText(t.workingHours != null ? t.workingHours : "");
 
-        // Тип
-        String typeLabel = typeRu(t.type);
-        h.tvType.setText(typeLabel);
+        h.tvType.setText(typeRu(t.type));
         h.tvType.setBackground(h.itemView.getContext().getResources()
                 .getDrawable(typeBgRes(t.type), null));
-        h.tvType.setTextColor(typeTextColor(h.itemView.getContext(), t.type));
+        h.tvType.setTextColor(typeTextColor(t.type));
+        h.typeStripe.setBackgroundColor(stripeColor(t.type));
 
-        // Цветная полоса слева
-        h.typeStripe.setBackgroundColor(stripeColor(h.itemView.getContext(), t.type));
+        h.tvAccessible.setVisibility(Boolean.TRUE.equals(t.accessible) ? View.VISIBLE : View.GONE);
 
-        // Доступность
-        if (Boolean.TRUE.equals(t.accessible)) {
-            h.tvAccessible.setVisibility(View.VISIBLE);
-        } else {
-            h.tvAccessible.setVisibility(View.GONE);
-        }
-
-        // Расстояние
         if (t.distanceMeters != null && t.distanceMeters > 0) {
             h.tvDistance.setText(formatDistance(t.distanceMeters));
             h.tvDistance.setVisibility(View.VISIBLE);
@@ -75,7 +72,17 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
             h.tvDistance.setVisibility(View.GONE);
         }
 
-        h.itemView.setOnClickListener(v -> listener.onToiletClick(t));
+        // Звезда избранного
+        boolean fav = favoritesManager.isFavorite(t.id);
+        h.btnFavorite.setImageResource(fav ? R.drawable.ic_favorite : R.drawable.ic_favorite_border);
+        h.btnFavorite.setOnClickListener(v -> {
+            favoritesManager.toggle(t.id);
+            boolean nowFav = favoritesManager.isFavorite(t.id);
+            h.btnFavorite.setImageResource(nowFav ? R.drawable.ic_favorite : R.drawable.ic_favorite_border);
+            if (onFavoritesChanged != null) onFavoritesChanged.run();
+        });
+
+        h.itemView.setOnClickListener(v -> clickListener.onToiletClick(t));
     }
 
     @Override
@@ -87,6 +94,7 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
         final View typeStripe;
         final TextView tvName, tvAddress, tvType, tvAccessible, tvDistance, tvRating, tvHours;
         final RatingBar ratingBar;
+        final ImageButton btnFavorite;
 
         ViewHolder(View v) {
             super(v);
@@ -99,6 +107,7 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
             tvRating     = v.findViewById(R.id.tvRating);
             tvHours      = v.findViewById(R.id.tvHours);
             ratingBar    = v.findViewById(R.id.ratingBar);
+            btnFavorite  = v.findViewById(R.id.btnFavorite);
         }
     }
 
@@ -124,18 +133,18 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
         }
     }
 
-    private int typeTextColor(Context ctx, String type) {
+    private int typeTextColor(String type) {
         if (type == null) return 0xFF424242;
         switch (type) {
-            case "FREE":   return 0xFF2E7D32; // dark green
-            case "PAID":   return 0xFFC62828; // dark red
-            case "TROIKA": return 0xFF6A1B9A; // dark purple
-            case "MALL":   return 0xFFE65100; // dark orange
+            case "FREE":   return 0xFF2E7D32;
+            case "PAID":   return 0xFFC62828;
+            case "TROIKA": return 0xFF6A1B9A;
+            case "MALL":   return 0xFFE65100;
             default:       return 0xFF424242;
         }
     }
 
-    private int stripeColor(Context ctx, String type) {
+    private int stripeColor(String type) {
         if (type == null) return 0xFF1E88E5;
         switch (type) {
             case "FREE":   return 0xFF43A047;

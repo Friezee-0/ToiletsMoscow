@@ -6,19 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Основной контейнер: карта и список занимают всё свободное пространство -->
+    <!-- Toolbar для карты (настройки) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:titleTextColor="@color/white" />
+
+    <!-- Основной контейнер: карта / список занимают всё пространство -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- Карта (всегда в DOM, чтобы MapKit не терял состояние) -->
+        <!-- Карта (всегда в DOM) -->
         <com.yandex.mapkit.mapview.MapView
             android:id="@+id/mapview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <!-- Чипы-фильтры поверх карты (только в режиме карты) -->
+        <!-- Чипы-фильтры поверх карты -->
         <HorizontalScrollView
             android:id="@+id/chipsContainer"
             android:layout_width="match_parent"
@@ -41,7 +51,7 @@
                 app:chipSpacingHorizontal="4dp" />
         </HorizontalScrollView>
 
-        <!-- Режим списка (белый фон поверх карты) -->
+        <!-- Режим списка / избранного -->
         <LinearLayout
             android:id="@+id/listContainer"
             android:layout_width="match_parent"
@@ -50,7 +60,7 @@
             android:background="@android:color/white"
             android:visibility="gone">
 
-            <!-- Строка поиска -->
+            <!-- Шапка с поиском -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,22 +75,43 @@
                 <EditText
                     android:id="@+id/etSearch"
                     android:layout_width="0dp"
-                    android:layout_height="44dp"
+                    android:layout_height="42dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_search"
                     android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
+                    android:paddingEnd="40dp"
                     android:hint="@string/search_hint"
                     android:hintTextColor="#9E9E9E"
                     android:textSize="15sp"
                     android:textColor="#212121"
                     android:inputType="text"
                     android:imeOptions="actionSearch"
-                    android:singleLine="true"
-                    android:maxLines="1" />
+                    android:singleLine="true" />
+
+                <!-- Кнопка очистки поиска -->
+                <ImageButton
+                    android:id="@+id/btnClearSearch"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="-44dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_clear"
+                    android:visibility="gone"
+                    android:contentDescription="Очистить" />
+
+                <!-- Кнопка настроек -->
+                <ImageButton
+                    android:id="@+id/btnSettings"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_settings"
+                    android:contentDescription="@string/settings_title" />
+
             </LinearLayout>
 
-            <!-- Счётчик результатов -->
+            <!-- Счётчик / заголовок -->
             <TextView
                 android:id="@+id/tvResultCount"
                 android:layout_width="match_parent"
@@ -92,18 +123,65 @@
                 android:textSize="13sp"
                 android:textColor="#757575" />
 
-            <!-- Список туалетов -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <!-- Список или empty state -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:clipToPadding="false"
-                android:paddingTop="4dp"
-                android:paddingBottom="8dp" />
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp" />
+
+                <!-- Пустое состояние -->
+                <LinearLayout
+                    android:id="@+id/emptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="32dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvEmptyIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_icon"
+                        android:textSize="64sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvEmptyTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/empty_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#424242"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvEmptySubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/empty_subtitle"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:gravity="center" />
+
+                </LinearLayout>
+            </FrameLayout>
+
         </LinearLayout>
 
-        <!-- FAB «Моё местоположение» (только в режиме карты) -->
+        <!-- FAB «Моё местоположение» -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabMyLocation"
             android:layout_width="wrap_content"
@@ -117,7 +195,7 @@
             app:fabSize="mini"
             app:elevation="6dp" />
 
-        <!-- FAB «Добавить туалет» (всегда виден) -->
+        <!-- FAB «Добавить туалет» -->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabAdd"
             android:layout_width="wrap_content"

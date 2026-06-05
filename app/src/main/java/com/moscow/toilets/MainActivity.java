@@ -13,6 +13,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ToiletListAdapter listAdapter;
     private TextView tvResultCount;
+    private View emptyState;
+    private EditText etSearch;
+    private ImageButton btnClearSearch;
 
     // UI-переключатели
     private View listContainer;
@@ -74,11 +78,15 @@ public class MainActivity extends AppCompatActivity {
 
     // Данные
     private final List<Toilet> allToilets = new ArrayList<>();
-    private String activeTypeFilter = null;  // null = все
+    private String activeTypeFilter = null;
     private boolean accessibleOnly  = false;
     private String  searchQuery     = "";
     private boolean isListMode      = false;
+    private boolean isFavoritesMode = false;
     private Point   userLocation    = null;
+
+    // Избранное
+    private FavoritesManager favoritesManager;
 
     // Геолокация
     private FusedLocationProviderClient fusedLocationClient;
@@ -112,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        favoritesManager = new FavoritesManager(this);
+
         // Карта
         mapView           = findViewById(R.id.mapview);
         map               = mapView.getMapWindow().getMap();
@@ -127,8 +137,15 @@ public class MainActivity extends AppCompatActivity {
         listContainer  = findViewById(R.id.listContainer);
         chipsContainer = findViewById(R.id.chipsContainer);
         fabMyLocation  = findViewById(R.id.fabMyLocation);
+        emptyState     = findViewById(R.id.emptyState);
+        etSearch       = findViewById(R.id.etSearch);
+        btnClearSearch = findViewById(R.id.btnClearSearch);
 
-        listAdapter = new ToiletListAdapter(this::openToiletDetail);
+        listAdapter = new ToiletListAdapter(
+                this::openToiletDetail,
+                favoritesManager,
+                this::onFavoritesChanged
+        );
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
 
@@ -140,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         setupFab();
         setupSearch();
         setupAddFab();
+        setupSettingsButton();
 
         allToilets.addAll(loadMockToiletsFromBackend());
         applyFiltersAndRender();
@@ -161,8 +179,14 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isListMode || isFavoritesMode) updateList();
+    }
+
     // ================================================================
-    //  Нижняя навигация (Карта / Список)
+    //  Нижняя навигация (Карта / Список / Избранное)
     // ================================================================
 
     private void setupBottomNav() {
@@ -175,6 +199,9 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.nav_list) {
                 showListMode();
                 return true;
+            } else if (id == R.id.nav_favorites) {
+                showFavoritesMode();
+                return true;
             }
             return false;
         });
@@ -182,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showMapMode() {
         isListMode = false;
+        isFavoritesMode = false;
         listContainer.setVisibility(View.GONE);
         chipsContainer.setVisibility(View.VISIBLE);
         fabMyLocation.setVisibility(View.VISIBLE);
@@ -189,10 +217,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void showListMode() {
         isListMode = true;
+        isFavoritesMode = false;
         listContainer.setVisibility(View.VISIBLE);
         chipsContainer.setVisibility(View.GONE);
         fabMyLocation.setVisibility(View.GONE);
         updateList();
+    }
+
+    private void showFavoritesMode() {
+        isListMode = false;
+        isFavoritesMode = true;
+        listContainer.setVisibility(View.VISIBLE);
+        chipsContainer.setVisibility(View.GONE);
+        fabMyLocation.setVisibility(View.GONE);
+        updateList();
+    }
+
+    private void onFavoritesChanged() {
+        if (isFavoritesMode) updateList();
     }
 
     // ================================================================
@@ -219,13 +261,11 @@ public class MainActivity extends AppCompatActivity {
         fusedLocationClient.getLastLocation().addOnSuccessListener(this, location -> {
             if (location != null) {
                 userLocation = new Point(location.getLatitude(), location.getLongitude());
-                // Обновляем distanceMeters во всех туалетах
                 for (Toilet t : allToilets) {
                     t.distanceMeters = haversineMeters(
                             userLocation.getLatitude(), userLocation.getLongitude(),
                             t.lat, t.lng);
                 }
-                // Сортируем по расстоянию
                 allToilets.sort((a, b) -> Double.compare(
                         a.distanceMeters != null ? a.distanceMeters : Double.MAX_VALUE,
                         b.distanceMeters != null ? b.distanceMeters : Double.MAX_VALUE));
@@ -264,6 +304,18 @@ public class MainActivity extends AppCompatActivity {
         fabAdd.setOnClickListener(v ->
                 Toast.makeText(this, getString(R.string.add_toilet_coming_soon),
                         Toast.LENGTH_SHORT).show());
+    }
+
+    // ================================================================
+    //  Настройки
+    // ================================================================
+
+    private void setupSettingsButton() {
+        ImageButton btnSettings = findViewById(R.id.btnSettings);
+        if (btnSettings != null) {
+            btnSettings.setOnClickListener(v ->
+                    startActivity(new Intent(this, SettingsActivity.class)));
+        }
     }
 
     // ================================================================
@@ -306,15 +358,20 @@ public class MainActivity extends AppCompatActivity {
     // ================================================================
 
     private void setupSearch() {
-        EditText etSearch = findViewById(R.id.etSearch);
         etSearch.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int st, int c, int a) {}
             @Override public void onTextChanged(CharSequence s, int st, int b, int c) {}
             @Override
             public void afterTextChanged(Editable s) {
                 searchQuery = s.toString().trim().toLowerCase(Locale.ROOT);
+                btnClearSearch.setVisibility(searchQuery.isEmpty() ? View.GONE : View.VISIBLE);
                 updateList();
             }
+        });
+
+        btnClearSearch.setOnClickListener(v -> {
+            etSearch.setText("");
+            etSearch.clearFocus();
         });
     }
 
@@ -323,6 +380,11 @@ public class MainActivity extends AppCompatActivity {
     // ================================================================
 
     private List<Toilet> getFilteredToilets() {
+        if (isFavoritesMode) {
+            return allToilets.stream()
+                    .filter(t -> favoritesManager.isFavorite(t.id))
+                    .collect(Collectors.toList());
+        }
         return allToilets.stream()
                 .filter(t -> activeTypeFilter == null || activeTypeFilter.equals(t.type))
                 .filter(t -> !accessibleOnly  || Boolean.TRUE.equals(t.accessible))
@@ -335,7 +397,7 @@ public class MainActivity extends AppCompatActivity {
     private void applyFiltersAndRender() {
         List<Toilet> filtered = getFilteredToilets();
         renderToilets(filtered);
-        if (isListMode) updateList(filtered);
+        if (isListMode || isFavoritesMode) updateList(filtered);
     }
 
     private void updateList() {
@@ -344,7 +406,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateList(List<Toilet> filtered) {
         listAdapter.submitList(filtered);
-        tvResultCount.setText(filtered.size() + " " + getString(R.string.toilets_nearby));
+        boolean isEmpty = filtered.isEmpty();
+        recyclerView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
+        emptyState.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
+
+        if (isFavoritesMode) {
+            tvResultCount.setText(getString(R.string.favorites_count, filtered.size()));
+            if (isEmpty) {
+                ((TextView) findViewById(R.id.tvEmptyTitle))
+                        .setText(R.string.empty_favorites_title);
+                ((TextView) findViewById(R.id.tvEmptySubtitle))
+                        .setText(R.string.empty_favorites_subtitle);
+            }
+        } else {
+            tvResultCount.setText(filtered.size() + " " + getString(R.string.toilets_nearby));
+            if (isEmpty) {
+                ((TextView) findViewById(R.id.tvEmptyTitle))
+                        .setText(R.string.empty_title);
+                ((TextView) findViewById(R.id.tvEmptySubtitle))
+                        .setText(R.string.empty_subtitle);
+            }
+        }
     }
 
     // ================================================================
@@ -452,7 +534,6 @@ public class MainActivity extends AppCompatActivity {
             dialog.dismiss();
         });
 
-        // Кнопка «Подробнее» → открываем полный экран
         View btnDetail = dialog.findViewById(R.id.btnDetail);
         if (btnDetail != null) btnDetail.setOnClickListener(v -> {
             openToiletDetail(toilet);
