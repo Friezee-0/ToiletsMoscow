@@ -1,9 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!-- Tank lid -->
     <path
-        android:fillColor="#1E88E5"
-        android:pathData="M30,30h48v48h-48z" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,26 L81,26 Q82,26 82,27 L82,33 Q82,34 81,34 L27,34 Q26,34 26,33 L26,27 Q26,26 27,26 Z" />
+
+    <!-- Tank body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,33 L78,33 Q80,33 80,35 L80,56 Q80,58 78,58 L30,58 Q28,58 28,56 L28,35 Q28,33 30,33 Z" />
+
+    <!-- Flush button (subtle circle on tank) -->
+    <path
+        android:fillColor="#A8C8E8"
+        android:pathData="M54,42 m-5,0 a5,3 0 1,0 10,0 a5,3 0 1,0 -10,0 Z" />
+
+    <!-- Connector between tank and bowl -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M37,57 L71,57 L71,66 L37,66 Z" />
+
+    <!-- Seat ring (outline only) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5.5"
+        android:pathData="M26,66 A28,9 0 1,0 82,66 A28,9 0 1,0 26,66 Z" />
+
+    <!-- Bowl -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,71 A26,19 0 1,0 80,71 A26,19 0 1,0 28,71 Z" />
+
+    <!-- Water reflection inside bowl -->
+    <path
+        android:fillColor="#A8CBE8"
+        android:pathData="M38,77 A16,9 0 1,0 70,77 A16,9 0 1,0 38,77 Z" />
+
 </vector>
