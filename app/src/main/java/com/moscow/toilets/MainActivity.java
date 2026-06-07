@@ -51,6 +51,7 @@ import com.yandex.mapkit.mapview.MapView;
 import com.yandex.mapkit.user_location.UserLocationLayer;
 import com.yandex.runtime.image.ImageProvider;
 
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Данные
     private final List<Toilet> allToilets = new ArrayList<>();
-    private String activeTypeFilter = null;
+    private String activeTypeFilter = null; // null / "FREE" / "PAID" / "MOBILE" / "STATIONARY"
     private boolean accessibleOnly  = false;
     private String  searchQuery     = "";
     private boolean isListMode      = false;
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
     private final ActivityResultLauncher<String> locationPermLauncher =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
                 if (granted) {
+                    applyLastKnownLocation();
                     startLocationUpdates();
                 } else {
                     Toast.makeText(this, getString(R.string.no_location_fallback),
@@ -276,10 +278,28 @@ public class MainActivity extends AppCompatActivity {
     private void requestLocationPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
+            applyLastKnownLocation();
             startLocationUpdates();
         } else {
             locationPermLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
         }
+    }
+
+    @SuppressWarnings("MissingPermission")
+    private void applyLastKnownLocation() {
+        fusedLocationClient.getLastLocation().addOnSuccessListener(location -> {
+            if (location == null || userLocation != null) return;
+            userLocation = new Point(location.getLatitude(), location.getLongitude());
+            for (Toilet t : allToilets) {
+                t.distanceMeters = haversineMeters(
+                        userLocation.getLatitude(), userLocation.getLongitude(), t.lat, t.lng);
+            }
+            allToilets.sort((a, b) -> Double.compare(
+                    a.distanceMeters != null ? a.distanceMeters : Double.MAX_VALUE,
+                    b.distanceMeters != null ? b.distanceMeters : Double.MAX_VALUE));
+            moveCamera(userLocation, 15f);
+            if (isListMode || isFavoritesMode) updateList();
+        });
     }
 
     private void moveCamera(Point target, float zoom) {
@@ -381,12 +401,12 @@ public class MainActivity extends AppCompatActivity {
     private void setupFilterChips() {
         ChipGroup chipGroup = findViewById(R.id.chipGroupFilters);
         String[][] filters = {
-                {"Все",        null},
-                {"Бесплатные", "FREE"},
-                {"Платные",    "PAID"},
-                {"По Тройке",  "TROIKA"},
-                {"В ТЦ",       "MALL"},
-                {"Доступные",  "ACCESSIBLE"}
+                {"Все",           null},
+                {"Бесплатные",    "FREE"},
+                {"Платные",       "PAID"},
+                {"Стационарные",  "STATIONARY"},
+                {"Модульные",     "MOBILE"},
+                {"Доступные",     "ACCESSIBLE"}
         };
         for (int i = 0; i < filters.length; i++) {
             Chip chip = new Chip(this);
@@ -450,7 +470,12 @@ public class MainActivity extends AppCompatActivity {
                         || userLocation == null
                         || t.distanceMeters == null
                         || t.distanceMeters <= searchRadiusMeters)
-                .filter(t -> activeTypeFilter == null || activeTypeFilter.equals(t.type))
+                .filter(t -> {
+                    if (activeTypeFilter == null) return true;
+                    if ("MOBILE".equals(activeTypeFilter))     return t.mobile;
+                    if ("STATIONARY".equals(activeTypeFilter)) return !t.mobile;
+                    return activeTypeFilter.equals(t.type);
+                })
                 .filter(t -> !accessibleOnly  || Boolean.TRUE.equals(t.accessible))
                 .filter(t -> searchQuery.isEmpty()
                         || (t.title   != null && t.title.toLowerCase(Locale.ROOT).contains(searchQuery))
@@ -569,7 +594,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView tvRating = dialog.findViewById(R.id.tvRating);
-        if (tvRating != null) tvRating.setText(String.format("%.1f ★", toilet.rating));
+        if (tvRating != null) {
+            if (toilet.rating > 0) {
+                tvRating.setText(String.format("%.1f ★", toilet.rating));
+                tvRating.setVisibility(View.VISIBLE);
+            } else {
+                tvRating.setVisibility(View.GONE);
+            }
+        }
 
         TextView tvHours = dialog.findViewById(R.id.tvWorkingHours);
         if (tvHours != null) {
@@ -633,11 +665,12 @@ public class MainActivity extends AppCompatActivity {
     private List<Toilet> loadToiletsFromAssets() {
         try {
             InputStream is = getAssets().open("toilets.json");
-            byte[] buffer = new byte[is.available()];
-            //noinspection ResultOfMethodCallIgnored
-            is.read(buffer);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buf = new byte[8192];
+            int len;
+            while ((len = is.read(buf)) != -1) baos.write(buf, 0, len);
             is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
+            String json = baos.toString("UTF-8");
             Type listType = new TypeToken<List<Toilet>>() {}.getType();
             List<Toilet> list = new Gson().fromJson(json, listType);
             return list != null ? list : new ArrayList<>();
