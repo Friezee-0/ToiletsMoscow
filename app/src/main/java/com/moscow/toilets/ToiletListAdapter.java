@@ -53,8 +53,13 @@ public class ToiletListAdapter extends RecyclerView.Adapter<ToiletListAdapter.Vi
 
         h.tvName.setText(t.title);
         h.tvAddress.setText(t.address);
-        h.ratingBar.setRating((float) t.rating);
-        h.tvRating.setText(String.format("%.1f", t.rating));
+        boolean hasRating = t.rating > 0;
+        h.ratingBar.setVisibility(hasRating ? View.VISIBLE : View.GONE);
+        h.tvRating.setVisibility(hasRating ? View.VISIBLE : View.GONE);
+        if (hasRating) {
+            h.ratingBar.setRating((float) t.rating);
+            h.tvRating.setText(String.format("%.1f", t.rating));
+        }
         h.tvHours.setText(t.workingHours != null ? t.workingHours : "");
 
         h.tvType.setText(typeRu(t.type));

@@ -118,6 +118,7 @@ for dataset_id, label in DATASETS:
             "lat": lat,
             "lng": lng,
             "type": map_type(paid_service),
+            "mobile": dataset_id == 1494,
             "accessible": map_accessible(disability),
             "rating": 0.0,
             "workingHours": working_hours,

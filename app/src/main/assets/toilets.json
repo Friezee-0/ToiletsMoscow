@@ -6,6 +6,7 @@
     "lat": 55.751334582,
     "lng": 37.612261866,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -17,6 +18,7 @@
     "lat": 55.767166135,
     "lng": 37.59573579,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -28,6 +30,7 @@
     "lat": 55.76380618,
     "lng": 37.657601699,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -39,6 +42,7 @@
     "lat": 55.740563013,
     "lng": 37.656037224,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -50,6 +54,7 @@
     "lat": 55.72628544,
     "lng": 37.560431198,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -61,6 +66,7 @@
     "lat": 55.770178406,
     "lng": 37.583392673,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -72,6 +78,7 @@
     "lat": 55.763522272,
     "lng": 37.593343895,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -83,6 +90,7 @@
     "lat": 55.758548243,
     "lng": 37.598927529,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -94,6 +102,7 @@
     "lat": 55.687311227,
     "lng": 37.545706169,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -105,6 +114,7 @@
     "lat": 55.642756199,
     "lng": 37.52364723,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -116,6 +126,7 @@
     "lat": 55.650539812,
     "lng": 37.53193993,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -127,6 +138,7 @@
     "lat": 55.657975477,
     "lng": 37.54306055,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -138,6 +150,7 @@
     "lat": 55.784978716,
     "lng": 37.352382938,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -149,6 +162,7 @@
     "lat": 55.74516244,
     "lng": 37.51493248,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -160,6 +174,7 @@
     "lat": 55.723304407,
     "lng": 37.401682262,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -171,6 +186,7 @@
     "lat": 55.757857226,
     "lng": 37.694264019,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -182,6 +198,7 @@
     "lat": 55.752147896,
     "lng": 37.718506074,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -193,6 +210,7 @@
     "lat": 55.747123971,
     "lng": 37.774573369,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -204,6 +222,7 @@
     "lat": 55.745298354,
     "lng": 37.776369842,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -215,6 +234,7 @@
     "lat": 55.737199772,
     "lng": 37.765407967,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -226,6 +246,7 @@
     "lat": 55.793661506,
     "lng": 37.811665375,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -237,6 +258,7 @@
     "lat": 55.811140304,
     "lng": 37.797217134,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -248,6 +270,7 @@
     "lat": 55.778519341,
     "lng": 37.826709697,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -259,6 +282,7 @@
     "lat": 55.647911898,
     "lng": 37.661830809,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -270,6 +294,7 @@
     "lat": 55.644649241,
     "lng": 37.665597605,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -281,6 +306,7 @@
     "lat": 55.595499283,
     "lng": 37.606114197,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -292,6 +318,7 @@
     "lat": 55.681551038,
     "lng": 37.62530515,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -303,6 +330,7 @@
     "lat": 55.716384934,
     "lng": 37.603433874,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -314,6 +342,7 @@
     "lat": 55.623425016,
     "lng": 37.598367257,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -325,6 +354,7 @@
     "lat": 55.884204541,
     "lng": 37.64351377,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -336,6 +366,7 @@
     "lat": 55.801370053,
     "lng": 37.634491178,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -347,6 +378,7 @@
     "lat": 55.823893602,
     "lng": 37.616463175,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -358,6 +390,7 @@
     "lat": 55.808160725,
     "lng": 37.467540978,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -369,6 +402,7 @@
     "lat": 55.781727538,
     "lng": 37.470813796,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -380,6 +414,7 @@
     "lat": 55.676542906,
     "lng": 37.580378026,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -391,6 +426,7 @@
     "lat": 55.599483468,
     "lng": 37.53852654,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -402,6 +438,7 @@
     "lat": 55.678649123,
     "lng": 37.650551784,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -413,6 +450,7 @@
     "lat": 55.874451393,
     "lng": 37.63924764,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -424,6 +462,7 @@
     "lat": 55.870273815,
     "lng": 37.677671605,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -435,6 +474,7 @@
     "lat": 55.886953217,
     "lng": 37.660119995,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -446,6 +486,7 @@
     "lat": 55.828339512,
     "lng": 37.647393978,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -457,6 +498,7 @@
     "lat": 55.804794287,
     "lng": 37.476008192,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -468,6 +510,7 @@
     "lat": 55.829844389,
     "lng": 37.454886721,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -479,6 +522,7 @@
     "lat": 55.851294939,
     "lng": 37.441401274,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -490,6 +534,7 @@
     "lat": 55.793292602,
     "lng": 37.494525374,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -501,6 +546,7 @@
     "lat": 55.985207514,
     "lng": 37.152575171,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -512,6 +558,7 @@
     "lat": 55.980605645,
     "lng": 37.171781614,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -523,6 +570,7 @@
     "lat": 55.754843661,
     "lng": 37.61731212,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -534,6 +582,7 @@
     "lat": 55.765858102,
     "lng": 37.577644545,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -545,6 +594,7 @@
     "lat": 55.745094404,
     "lng": 37.614557518,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -556,6 +606,7 @@
     "lat": 55.766567285,
     "lng": 37.653854717,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -567,6 +618,7 @@
     "lat": 55.79073363,
     "lng": 37.589622502,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -578,6 +630,7 @@
     "lat": 55.691811464,
     "lng": 37.589878033,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -589,6 +642,7 @@
     "lat": 55.70658154,
     "lng": 37.585162804,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -600,6 +654,7 @@
     "lat": 55.676287819,
     "lng": 37.525550824,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -611,6 +666,7 @@
     "lat": 55.703764952,
     "lng": 37.576254857,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -622,6 +678,7 @@
     "lat": 55.736592961,
     "lng": 37.467883372,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -633,6 +690,7 @@
     "lat": 55.724437224,
     "lng": 37.398031457,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -644,6 +702,7 @@
     "lat": 55.664335124,
     "lng": 37.485059991,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -655,6 +714,7 @@
     "lat": 55.883491406,
     "lng": 37.602883743,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -666,6 +726,7 @@
     "lat": 55.786450808,
     "lng": 37.565757081,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -677,6 +738,7 @@
     "lat": 55.78205875,
     "lng": 37.555086587,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -688,6 +750,7 @@
     "lat": 55.833798273,
     "lng": 37.550124438,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -699,6 +762,7 @@
     "lat": 55.78664898,
     "lng": 37.561451926,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -710,6 +774,7 @@
     "lat": 55.795474085,
     "lng": 37.51774993,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -721,6 +786,7 @@
     "lat": 55.815468478,
     "lng": 37.497852724,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -732,6 +798,7 @@
     "lat": 55.72560139,
     "lng": 37.465273577,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -743,6 +810,7 @@
     "lat": 55.785663349,
     "lng": 37.511730686,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -754,6 +822,7 @@
     "lat": 55.8108827,
     "lng": 37.567150274,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -765,6 +834,7 @@
     "lat": 55.981219779,
     "lng": 37.18369195,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -776,6 +846,7 @@
     "lat": 55.879688066,
     "lng": 37.472287695,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -787,6 +858,7 @@
     "lat": 55.778452028,
     "lng": 37.600939739,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -798,6 +870,7 @@
     "lat": 55.759806981,
     "lng": 37.646433417,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -809,6 +882,7 @@
     "lat": 55.777523683,
     "lng": 37.594654254,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -820,6 +894,7 @@
     "lat": 55.747656806,
     "lng": 37.669598741,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -831,6 +906,7 @@
     "lat": 55.782883993,
     "lng": 37.663843329,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -842,6 +918,7 @@
     "lat": 55.722085216,
     "lng": 37.600577932,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -853,6 +930,7 @@
     "lat": 55.742673067,
     "lng": 37.653332424,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -864,6 +942,7 @@
     "lat": 55.725447261,
     "lng": 37.668601549,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -875,6 +954,7 @@
     "lat": 55.703956212,
     "lng": 37.675142784,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -886,6 +966,7 @@
     "lat": 55.750109361,
     "lng": 37.802840859,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -897,6 +978,7 @@
     "lat": 55.668964313,
     "lng": 37.625830054,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -908,6 +990,7 @@
     "lat": 55.655832579,
     "lng": 37.648289846,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -919,6 +1002,7 @@
     "lat": 55.727783257,
     "lng": 37.677795285,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -930,6 +1014,7 @@
     "lat": 55.75596396,
     "lng": 37.64783089,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -941,6 +1026,7 @@
     "lat": 55.745452514,
     "lng": 37.679378421,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -952,6 +1038,7 @@
     "lat": 55.730042992,
     "lng": 37.773710409,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -963,6 +1050,7 @@
     "lat": 55.706037578,
     "lng": 37.689782083,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -974,6 +1062,7 @@
     "lat": 55.638580311,
     "lng": 37.792856448,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -985,6 +1074,7 @@
     "lat": 55.73467236,
     "lng": 37.60979935,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -996,6 +1086,7 @@
     "lat": 55.762243487,
     "lng": 37.561961409,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1007,6 +1098,7 @@
     "lat": 55.694778893,
     "lng": 37.794032514,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1018,6 +1110,7 @@
     "lat": 55.766609907,
     "lng": 37.699597234,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1029,6 +1122,7 @@
     "lat": 55.761493638,
     "lng": 37.772155833,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1040,6 +1134,7 @@
     "lat": 55.795921108,
     "lng": 37.798548225,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1051,6 +1146,7 @@
     "lat": 55.788900451,
     "lng": 37.783682973,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1062,6 +1158,7 @@
     "lat": 55.796651971,
     "lng": 37.781656447,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1073,6 +1170,7 @@
     "lat": 55.724624192,
     "lng": 37.825001663,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1084,6 +1182,7 @@
     "lat": 55.705625346,
     "lng": 37.655879885,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1095,6 +1194,7 @@
     "lat": 55.718101396,
     "lng": 37.662441582,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1106,6 +1206,7 @@
     "lat": 55.713307948,
     "lng": 37.659352907,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1117,6 +1218,7 @@
     "lat": 55.615535507,
     "lng": 37.72067604,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1128,6 +1230,7 @@
     "lat": 55.676661398,
     "lng": 37.66511624,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1139,6 +1242,7 @@
     "lat": 55.598562485,
     "lng": 37.663144921,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1150,6 +1254,7 @@
     "lat": 55.622983499,
     "lng": 37.742197863,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1161,6 +1266,7 @@
     "lat": 55.605943623,
     "lng": 37.712994613,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1172,6 +1278,7 @@
     "lat": 55.852466904,
     "lng": 37.645012829,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1183,6 +1290,7 @@
     "lat": 55.878226346,
     "lng": 37.58208063,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1194,6 +1302,7 @@
     "lat": 55.54449759,
     "lng": 37.537350756,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1205,6 +1314,7 @@
     "lat": 55.693001748,
     "lng": 37.552319613,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1216,6 +1326,7 @@
     "lat": 55.706871516,
     "lng": 37.579938568,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1227,6 +1338,7 @@
     "lat": 55.740059571,
     "lng": 37.484521766,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1238,6 +1350,7 @@
     "lat": 55.745952066,
     "lng": 37.554819651,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1249,6 +1362,7 @@
     "lat": 55.704413678,
     "lng": 37.479646746,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1260,6 +1374,7 @@
     "lat": 55.756965373,
     "lng": 37.434751417,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1271,6 +1386,7 @@
     "lat": 55.710104542,
     "lng": 37.538487472,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1282,6 +1398,7 @@
     "lat": 55.840627129,
     "lng": 37.525787861,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1293,6 +1410,7 @@
     "lat": 55.779834535,
     "lng": 37.559780143,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1304,6 +1422,7 @@
     "lat": 55.793134537,
     "lng": 37.577867913,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1315,6 +1434,7 @@
     "lat": 55.858165998,
     "lng": 37.491432404,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1326,6 +1446,7 @@
     "lat": 55.804152103,
     "lng": 37.51510819,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1337,6 +1458,7 @@
     "lat": 56.002654038,
     "lng": 37.21054754,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1348,6 +1470,7 @@
     "lat": 55.752436795,
     "lng": 37.621738706,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -1359,6 +1482,7 @@
     "lat": 55.789794675,
     "lng": 37.618592642,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1370,6 +1494,7 @@
     "lat": 55.728239089,
     "lng": 37.579577757,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -1381,6 +1506,7 @@
     "lat": 55.750825349,
     "lng": 37.493479502,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1392,6 +1518,7 @@
     "lat": 55.758937561,
     "lng": 37.409176803,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1403,6 +1530,7 @@
     "lat": 55.729092992,
     "lng": 37.44474686,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1414,6 +1542,7 @@
     "lat": 55.740279596,
     "lng": 37.499076248,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1425,6 +1554,7 @@
     "lat": 55.885844911,
     "lng": 37.527895786,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1436,6 +1566,7 @@
     "lat": 55.799130479,
     "lng": 37.58172958,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1447,6 +1578,7 @@
     "lat": 55.825677586,
     "lng": 37.517345574,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1458,6 +1590,7 @@
     "lat": 55.791474647,
     "lng": 37.555666234,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1469,6 +1602,7 @@
     "lat": 55.873406586,
     "lng": 37.554851594,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1480,6 +1614,7 @@
     "lat": 55.865862468,
     "lng": 37.571380529,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1491,6 +1626,7 @@
     "lat": 55.862825327,
     "lng": 37.466231364,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1502,6 +1638,7 @@
     "lat": 55.837363363,
     "lng": 37.538897247,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1513,6 +1650,7 @@
     "lat": 55.783283416,
     "lng": 37.56588607,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1524,6 +1662,7 @@
     "lat": 55.768245697,
     "lng": 37.614091017,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1535,6 +1674,7 @@
     "lat": 55.756847467,
     "lng": 37.627004548,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1546,6 +1686,7 @@
     "lat": 55.750910737,
     "lng": 37.610207487,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1557,6 +1698,7 @@
     "lat": 55.759548132,
     "lng": 37.577780407,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1568,6 +1710,7 @@
     "lat": 55.679862298,
     "lng": 37.737891118,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1579,6 +1722,7 @@
     "lat": 55.755151385,
     "lng": 37.752951737,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1590,6 +1734,7 @@
     "lat": 55.630459299,
     "lng": 37.672617627,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1601,6 +1746,7 @@
     "lat": 55.794608345,
     "lng": 37.618837257,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1612,6 +1758,7 @@
     "lat": 55.863581653,
     "lng": 37.683931127,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1623,6 +1770,7 @@
     "lat": 55.813909829,
     "lng": 37.662026429,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1634,6 +1782,7 @@
     "lat": 55.805546169,
     "lng": 37.583083402,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1645,6 +1794,7 @@
     "lat": 55.677794757,
     "lng": 37.534682479,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1656,6 +1806,7 @@
     "lat": 55.6075143,
     "lng": 37.512987438,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1667,6 +1818,7 @@
     "lat": 55.675437219,
     "lng": 37.469075594,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1678,6 +1830,7 @@
     "lat": 55.676754735,
     "lng": 37.765589653,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1689,6 +1842,7 @@
     "lat": 55.702617454,
     "lng": 37.7665909,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1700,6 +1854,7 @@
     "lat": 55.704982229,
     "lng": 37.797238784,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1711,6 +1866,7 @@
     "lat": 55.707114254,
     "lng": 37.730458346,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -1722,6 +1878,7 @@
     "lat": 55.717880437,
     "lng": 37.793284214,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1733,6 +1890,7 @@
     "lat": 55.816500054,
     "lng": 37.86478196,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1744,6 +1902,7 @@
     "lat": 55.792747451,
     "lng": 37.799962953,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1755,6 +1914,7 @@
     "lat": 55.787863295,
     "lng": 37.800271864,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1766,6 +1926,7 @@
     "lat": 55.793467264,
     "lng": 37.775848155,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1777,6 +1938,7 @@
     "lat": 55.67830848,
     "lng": 37.662991797,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1788,6 +1950,7 @@
     "lat": 55.86345322,
     "lng": 37.703343869,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-19:00"
@@ -1799,6 +1962,7 @@
     "lat": 55.88233227,
     "lng": 37.713910288,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1810,6 +1974,7 @@
     "lat": 55.818423841,
     "lng": 37.636592576,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1821,6 +1986,7 @@
     "lat": 55.807055938,
     "lng": 37.636381411,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1832,6 +1998,7 @@
     "lat": 55.824747835,
     "lng": 37.635968452,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -1843,6 +2010,7 @@
     "lat": 55.827051866,
     "lng": 37.640398537,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-02:00"
@@ -1854,6 +2022,7 @@
     "lat": 55.777479636,
     "lng": 37.47999903,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1865,6 +2034,7 @@
     "lat": 55.849524028,
     "lng": 37.42328162,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1876,6 +2046,7 @@
     "lat": 55.678803967,
     "lng": 37.564568191,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -1887,6 +2058,7 @@
     "lat": 55.67334538,
     "lng": 37.594981908,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1898,6 +2070,7 @@
     "lat": 55.541370945,
     "lng": 37.533602228,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -1909,6 +2082,7 @@
     "lat": 55.67085086,
     "lng": 37.430975884,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1920,6 +2094,7 @@
     "lat": 55.683067175,
     "lng": 37.451685618,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -1931,6 +2106,7 @@
     "lat": 55.655160869,
     "lng": 37.484565463,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1942,6 +2118,7 @@
     "lat": 55.855613884,
     "lng": 37.451592175,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -1953,6 +2130,7 @@
     "lat": 55.738524365,
     "lng": 37.610877503,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -1964,6 +2142,7 @@
     "lat": 55.738523444,
     "lng": 37.610898975,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -1975,6 +2154,7 @@
     "lat": 55.736016198,
     "lng": 37.605340899,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1986,6 +2166,7 @@
     "lat": 55.736019817,
     "lng": 37.605345772,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -1997,6 +2178,7 @@
     "lat": 55.734508732,
     "lng": 37.602481487,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2008,6 +2190,7 @@
     "lat": 55.666652988,
     "lng": 37.527384046,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -2019,6 +2202,7 @@
     "lat": 55.73149869,
     "lng": 37.600986386,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:59"
@@ -2030,6 +2214,7 @@
     "lat": 55.725269113,
     "lng": 37.599873652,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2041,6 +2226,7 @@
     "lat": 55.726286822,
     "lng": 37.59572583,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-23:00"
@@ -2052,6 +2238,7 @@
     "lat": 55.722736015,
     "lng": 37.593070214,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2063,6 +2250,7 @@
     "lat": 55.719276832,
     "lng": 37.589018671,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 11:00-20:00"
@@ -2074,6 +2262,7 @@
     "lat": 55.716592839,
     "lng": 37.589187877,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2085,6 +2274,7 @@
     "lat": 55.718550598,
     "lng": 37.590344735,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 11:00-21:00"
@@ -2096,6 +2286,7 @@
     "lat": 55.712075913,
     "lng": 37.582819576,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2107,6 +2298,7 @@
     "lat": 55.73039351,
     "lng": 37.608304699,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-00:00"
@@ -2118,6 +2310,7 @@
     "lat": 55.726667319,
     "lng": 37.60189373,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2129,6 +2322,7 @@
     "lat": 55.725240352,
     "lng": 37.599889746,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-23:00"
@@ -2140,6 +2334,7 @@
     "lat": 55.728281673,
     "lng": 37.60260723,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:59"
@@ -2151,6 +2346,7 @@
     "lat": 55.730013199,
     "lng": 37.599011381,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-23:59"
@@ -2162,6 +2358,7 @@
     "lat": 55.784093757,
     "lng": 37.750362266,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2173,6 +2370,7 @@
     "lat": 55.774852694,
     "lng": 37.748041977,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2184,6 +2382,7 @@
     "lat": 55.775032202,
     "lng": 37.756521962,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2195,6 +2394,7 @@
     "lat": 55.744066152,
     "lng": 37.480582384,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-21:00"
@@ -2206,6 +2406,7 @@
     "lat": 55.795337052,
     "lng": 37.68017137,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2217,6 +2418,7 @@
     "lat": 55.798900073,
     "lng": 37.671535458,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2228,6 +2430,7 @@
     "lat": 55.798407056,
     "lng": 37.676435151,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2239,6 +2442,7 @@
     "lat": 55.799682438,
     "lng": 37.675411509,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2250,6 +2454,7 @@
     "lat": 55.813400431,
     "lng": 37.674423672,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2261,6 +2466,7 @@
     "lat": 55.794436752,
     "lng": 37.664352699,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2272,6 +2478,7 @@
     "lat": 55.899391545,
     "lng": 37.573504566,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2283,6 +2490,7 @@
     "lat": 55.695258557,
     "lng": 37.766225,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2294,6 +2502,7 @@
     "lat": 55.76740811,
     "lng": 37.660286255,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2305,6 +2514,7 @@
     "lat": 55.766085832,
     "lng": 37.659006853,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2316,6 +2526,7 @@
     "lat": 55.738500794,
     "lng": 37.667919804,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2327,6 +2538,7 @@
     "lat": 55.861083785,
     "lng": 37.449701142,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2338,6 +2550,7 @@
     "lat": 55.686516609,
     "lng": 37.741804507,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2349,6 +2562,7 @@
     "lat": 55.765037777,
     "lng": 37.575220603,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:30-22:00"
@@ -2360,6 +2574,7 @@
     "lat": 55.764281949,
     "lng": 37.582925721,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:30-22:00"
@@ -2371,6 +2586,7 @@
     "lat": 55.761701921,
     "lng": 37.583114593,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:30-22:00"
@@ -2382,6 +2598,7 @@
     "lat": 55.669974549,
     "lng": 37.670572211,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 06:00-23:59"
@@ -2393,6 +2610,7 @@
     "lat": 55.618668178,
     "lng": 37.682834627,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2404,6 +2622,7 @@
     "lat": 55.614195776,
     "lng": 37.686471339,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2415,6 +2634,7 @@
     "lat": 55.619433087,
     "lng": 37.673537003,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2426,6 +2646,7 @@
     "lat": 55.76109738,
     "lng": 37.578359151,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:30-22:00"
@@ -2437,6 +2658,7 @@
     "lat": 55.729337048,
     "lng": 37.605153777,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:00"
@@ -2448,6 +2670,7 @@
     "lat": 55.775336793,
     "lng": 37.751928858,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2459,6 +2682,7 @@
     "lat": 55.798205413,
     "lng": 37.681847031,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2470,6 +2694,7 @@
     "lat": 55.794738407,
     "lng": 37.673832268,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2481,6 +2706,7 @@
     "lat": 55.7689829,
     "lng": 37.659958161,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2492,6 +2718,7 @@
     "lat": 55.678247373,
     "lng": 37.505710762,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-21:00"
@@ -2503,6 +2730,7 @@
     "lat": 55.779798463,
     "lng": 37.717744419,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2514,6 +2742,7 @@
     "lat": 55.797092881,
     "lng": 37.71803928,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -2525,6 +2754,7 @@
     "lat": 55.596949876,
     "lng": 37.633278111,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2536,6 +2766,7 @@
     "lat": 55.7986493,
     "lng": 37.512110256,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2547,6 +2778,7 @@
     "lat": 55.735500466,
     "lng": 37.578490131,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2558,6 +2790,7 @@
     "lat": 55.765979945,
     "lng": 37.69447164,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -2569,6 +2802,7 @@
     "lat": 55.720324322,
     "lng": 37.570247794,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -2580,6 +2814,7 @@
     "lat": 55.793906192,
     "lng": 37.666919073,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:30"
@@ -2591,6 +2826,7 @@
     "lat": 55.614518238,
     "lng": 37.674679472,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2602,6 +2838,7 @@
     "lat": 55.750443522,
     "lng": 37.630494251,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -2613,6 +2850,7 @@
     "lat": 55.750807572,
     "lng": 37.626186905,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-22:00"
@@ -2624,6 +2862,7 @@
     "lat": 55.75154882,
     "lng": 37.627168634,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 14:00-20:00; вторник: 10:00-20:00"
@@ -2635,6 +2874,7 @@
     "lat": 55.751737185,
     "lng": 37.629398224,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 14:00-20:00; вторник: 10:00-20:00"
@@ -2646,6 +2886,7 @@
     "lat": 55.75176586,
     "lng": 37.628777517,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 14:00-20:00; вторник: 10:00-20:00"
@@ -2657,6 +2898,7 @@
     "lat": 55.741058703,
     "lng": 37.661336973,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-22:00"
@@ -2668,6 +2910,7 @@
     "lat": 55.688519674,
     "lng": 37.8101267,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-18:00"
@@ -2679,6 +2922,7 @@
     "lat": 55.731716265,
     "lng": 37.815723267,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-22:00"
@@ -2690,6 +2934,7 @@
     "lat": 55.730435689,
     "lng": 37.825970958,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-22:00"
@@ -2701,6 +2946,7 @@
     "lat": 55.730399948,
     "lng": 37.826561299,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-22:00"
@@ -2712,6 +2958,7 @@
     "lat": 55.611482914,
     "lng": 37.672962401,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -2723,6 +2970,7 @@
     "lat": 55.78140438,
     "lng": 37.705902356,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -2734,6 +2982,7 @@
     "lat": 55.581210884,
     "lng": 37.652543358,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2745,6 +2994,7 @@
     "lat": 55.58119902,
     "lng": 37.652652393,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2756,6 +3006,7 @@
     "lat": 55.5811955,
     "lng": 37.652692213,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -2767,6 +3018,7 @@
     "lat": 55.734179272,
     "lng": 37.602187353,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2778,6 +3030,7 @@
     "lat": 55.734307616,
     "lng": 37.602472548,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2789,6 +3042,7 @@
     "lat": 55.734366486,
     "lng": 37.602548665,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2800,6 +3054,7 @@
     "lat": 55.734452088,
     "lng": 37.602691319,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2811,6 +3066,7 @@
     "lat": 55.653469745,
     "lng": 37.597069789,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2822,6 +3078,7 @@
     "lat": 55.653344604,
     "lng": 37.597195946,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2833,6 +3090,7 @@
     "lat": 55.802051997,
     "lng": 37.512267842,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2844,6 +3102,7 @@
     "lat": 55.728637853,
     "lng": 37.65844683,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2855,6 +3114,7 @@
     "lat": 55.802042933,
     "lng": 37.512466326,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2866,6 +3126,7 @@
     "lat": 55.883195668,
     "lng": 37.602623642,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2877,6 +3138,7 @@
     "lat": 55.740382328,
     "lng": 37.621777072,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2888,6 +3150,7 @@
     "lat": 55.740414226,
     "lng": 37.621768982,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2899,6 +3162,7 @@
     "lat": 55.815628766,
     "lng": 37.716514134,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2910,6 +3174,7 @@
     "lat": 55.740245959,
     "lng": 37.599857519,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2921,6 +3186,7 @@
     "lat": 55.740261954,
     "lng": 37.599952527,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2932,6 +3198,7 @@
     "lat": 55.789395846,
     "lng": 37.694405928,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2943,6 +3210,7 @@
     "lat": 55.789411776,
     "lng": 37.694421577,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2954,6 +3222,7 @@
     "lat": 55.789369833,
     "lng": 37.694435107,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2965,6 +3234,7 @@
     "lat": 55.789383756,
     "lng": 37.694416656,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2976,6 +3246,7 @@
     "lat": 55.789407936,
     "lng": 37.694438114,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2987,6 +3258,7 @@
     "lat": 55.789395846,
     "lng": 37.694429177,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -2998,6 +3270,7 @@
     "lat": 55.740283268,
     "lng": 37.600095033,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-20:00"
@@ -3009,6 +3282,7 @@
     "lat": 55.74024568,
     "lng": 37.600199401,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-20:00"
@@ -3020,6 +3294,7 @@
     "lat": 55.771061583,
     "lng": 37.632339611,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -3031,6 +3306,7 @@
     "lat": 55.738539258,
     "lng": 37.57432343,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -3042,6 +3318,7 @@
     "lat": 55.771069999,
     "lng": 37.632311856,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -3053,6 +3330,7 @@
     "lat": 55.738551364,
     "lng": 37.574301972,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -3064,6 +3342,7 @@
     "lat": 55.788845748,
     "lng": 37.747148886,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -3075,6 +3354,7 @@
     "lat": 55.788868417,
     "lng": 37.747210577,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-18:00"
@@ -3086,6 +3366,7 @@
     "lat": 55.541334558,
     "lng": 37.514038861,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3097,6 +3378,7 @@
     "lat": 55.641902564,
     "lng": 37.709029331,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3108,6 +3390,7 @@
     "lat": 55.53661641,
     "lng": 37.499747903,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3119,6 +3402,7 @@
     "lat": 55.641216878,
     "lng": 37.714597597,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3130,6 +3414,7 @@
     "lat": 55.64168538,
     "lng": 37.717036394,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3141,6 +3426,7 @@
     "lat": 55.533901449,
     "lng": 37.499634638,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3152,6 +3438,7 @@
     "lat": 55.536332895,
     "lng": 37.524810906,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3163,6 +3450,7 @@
     "lat": 55.642084602,
     "lng": 37.723373785,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3174,6 +3462,7 @@
     "lat": 55.642509051,
     "lng": 37.727820783,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3185,6 +3474,7 @@
     "lat": 55.536168205,
     "lng": 37.524486912,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3196,6 +3486,7 @@
     "lat": 55.645949266,
     "lng": 37.761581027,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3207,6 +3498,7 @@
     "lat": 55.866507596,
     "lng": 37.503057137,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3218,6 +3510,7 @@
     "lat": 55.866477431,
     "lng": 37.503153696,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3229,6 +3522,7 @@
     "lat": 55.69224048,
     "lng": 37.571838269,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3240,6 +3534,7 @@
     "lat": 55.866462349,
     "lng": 37.50315906,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3251,6 +3546,7 @@
     "lat": 55.692273512,
     "lng": 37.572000637,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3262,6 +3558,7 @@
     "lat": 55.866449666,
     "lng": 37.503153184,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3273,6 +3570,7 @@
     "lat": 55.86644425,
     "lng": 37.503169789,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3284,6 +3582,7 @@
     "lat": 55.841986446,
     "lng": 37.643771748,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3295,6 +3594,7 @@
     "lat": 55.795070363,
     "lng": 37.552276272,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3306,6 +3606,7 @@
     "lat": 55.735009249,
     "lng": 37.812585843,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 10:00-20:00"
@@ -3317,6 +3618,7 @@
     "lat": 55.818143152,
     "lng": 37.813989535,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -3328,6 +3630,7 @@
     "lat": 55.817483941,
     "lng": 37.811976436,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3339,6 +3642,7 @@
     "lat": 55.846531519,
     "lng": 37.474231237,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3350,6 +3654,7 @@
     "lat": 55.876970376,
     "lng": 37.443486145,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3361,6 +3666,7 @@
     "lat": 55.876994493,
     "lng": 37.44350517,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3372,6 +3678,7 @@
     "lat": 55.876994484,
     "lng": 37.44348611,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3383,6 +3690,7 @@
     "lat": 55.876994484,
     "lng": 37.44348611,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3394,6 +3702,7 @@
     "lat": 55.731776073,
     "lng": 37.501613396,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "Круглосуточно"
@@ -3405,6 +3714,7 @@
     "lat": 55.728751623,
     "lng": 37.50518299,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-02:00"
@@ -3416,6 +3726,7 @@
     "lat": 55.699966075,
     "lng": 37.613947252,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3427,6 +3738,7 @@
     "lat": 55.768701935,
     "lng": 37.751552377,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-21:00"
@@ -3438,6 +3750,7 @@
     "lat": 55.769835624,
     "lng": 37.609164152,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 09:00-23:00"
@@ -3449,6 +3762,7 @@
     "lat": 55.936594325,
     "lng": 37.553650457,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3460,6 +3774,7 @@
     "lat": 55.812039154,
     "lng": 37.641304522,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3471,6 +3786,7 @@
     "lat": 55.800352654,
     "lng": 37.735881383,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3482,6 +3798,7 @@
     "lat": 55.862073698,
     "lng": 37.434781532,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3493,6 +3810,7 @@
     "lat": 55.791408537,
     "lng": 37.511585736,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3504,6 +3822,7 @@
     "lat": 55.822174671,
     "lng": 37.800593897,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3515,6 +3834,7 @@
     "lat": 55.630366769,
     "lng": 37.475897618,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -3526,6 +3846,7 @@
     "lat": 55.827429433,
     "lng": 37.609237168,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -3537,6 +3858,7 @@
     "lat": 55.829165852,
     "lng": 37.618017999,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-00:00"
@@ -3548,6 +3870,7 @@
     "lat": 55.764437118,
     "lng": 37.575638069,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 07:30-22:00"
@@ -3559,6 +3882,7 @@
     "lat": 55.786938539,
     "lng": 37.748883484,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 07:00-23:00"
@@ -3570,6 +3894,7 @@
     "lat": 55.674450409,
     "lng": 37.672497592,
     "type": "FREE",
+    "mobile": false,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 06:00-23:59"
@@ -3581,6 +3906,7 @@
     "lat": 55.817932306,
     "lng": 37.484498446,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3592,6 +3918,7 @@
     "lat": 55.814672801,
     "lng": 37.472254122,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3603,6 +3930,7 @@
     "lat": 55.82047903,
     "lng": 37.466987502,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3614,6 +3942,7 @@
     "lat": 55.826402267,
     "lng": 37.482724797,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3625,6 +3954,7 @@
     "lat": 55.826188709,
     "lng": 37.489263526,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3636,6 +3966,7 @@
     "lat": 55.691522983,
     "lng": 37.746640726,
     "type": "FREE",
+    "mobile": false,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -3647,6 +3978,7 @@
     "lat": 55.721990388,
     "lng": 37.561159891,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3658,6 +3990,7 @@
     "lat": 55.822686908,
     "lng": 37.641636178,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3669,6 +4002,7 @@
     "lat": 55.823998983,
     "lng": 37.636636078,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3680,6 +4014,7 @@
     "lat": 55.898642914,
     "lng": 37.5865079,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3691,6 +4026,7 @@
     "lat": 55.824156706,
     "lng": 37.636444836,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3702,6 +4038,7 @@
     "lat": 55.758387236,
     "lng": 37.658906185,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3713,6 +4050,7 @@
     "lat": 55.823489205,
     "lng": 37.64058075,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3724,6 +4062,7 @@
     "lat": 55.730692745,
     "lng": 37.494437536,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3735,6 +4074,7 @@
     "lat": 55.744903307,
     "lng": 37.601105312,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3746,6 +4086,7 @@
     "lat": 55.823941226,
     "lng": 37.63691097,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3757,6 +4098,7 @@
     "lat": 55.730076867,
     "lng": 37.495222506,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3768,6 +4110,7 @@
     "lat": 55.621865383,
     "lng": 37.668574228,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3779,6 +4122,7 @@
     "lat": 55.788874989,
     "lng": 37.748883358,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3790,6 +4134,7 @@
     "lat": 55.726919889,
     "lng": 37.578415336,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3801,6 +4146,7 @@
     "lat": 55.768175227,
     "lng": 37.647447495,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3812,6 +4158,7 @@
     "lat": 55.729009988,
     "lng": 37.636073316,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3823,6 +4170,7 @@
     "lat": 55.748017632,
     "lng": 37.681255531,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3834,6 +4182,7 @@
     "lat": 55.669282789,
     "lng": 37.552968461,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3845,6 +4194,7 @@
     "lat": 55.811310908,
     "lng": 37.798240887,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3856,6 +4206,7 @@
     "lat": 55.677635348,
     "lng": 37.561875901,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3867,6 +4218,7 @@
     "lat": 55.731998028,
     "lng": 37.667471321,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3878,6 +4230,7 @@
     "lat": 55.692869007,
     "lng": 37.727165788,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3889,6 +4242,7 @@
     "lat": 55.747892866,
     "lng": 37.681646243,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3900,6 +4254,7 @@
     "lat": 55.750627968,
     "lng": 37.595304156,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3911,6 +4266,7 @@
     "lat": 55.705840774,
     "lng": 37.763978047,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3922,6 +4278,7 @@
     "lat": 55.749197599,
     "lng": 37.590802124,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3933,6 +4290,7 @@
     "lat": 55.763888142,
     "lng": 37.56295088,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3944,6 +4302,7 @@
     "lat": 55.746037101,
     "lng": 37.678584987,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3955,6 +4314,7 @@
     "lat": 55.811655144,
     "lng": 37.7982591,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3966,6 +4326,7 @@
     "lat": 55.750248569,
     "lng": 37.594015739,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3977,6 +4338,7 @@
     "lat": 55.848667223,
     "lng": 37.590391836,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3988,6 +4350,7 @@
     "lat": 55.706452842,
     "lng": 37.685105966,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -3999,6 +4362,7 @@
     "lat": 55.676445657,
     "lng": 37.662583132,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4010,6 +4374,7 @@
     "lat": 55.681901335,
     "lng": 37.621638737,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4021,6 +4386,7 @@
     "lat": 55.733741699,
     "lng": 37.5138156,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4032,6 +4398,7 @@
     "lat": 55.772262932,
     "lng": 37.633365765,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4043,6 +4410,7 @@
     "lat": 55.76401856,
     "lng": 37.604351512,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4054,6 +4422,7 @@
     "lat": 55.777774471,
     "lng": 37.581037644,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4065,6 +4434,7 @@
     "lat": 55.691441093,
     "lng": 37.533974214,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4076,6 +4446,7 @@
     "lat": 55.705582738,
     "lng": 37.763048845,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4087,6 +4458,7 @@
     "lat": 55.762978912,
     "lng": 37.560848474,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4098,6 +4470,7 @@
     "lat": 55.810640648,
     "lng": 37.803204749,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4109,6 +4482,7 @@
     "lat": 55.838932476,
     "lng": 37.487067331,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4120,6 +4494,7 @@
     "lat": 55.742597419,
     "lng": 37.62932331,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4131,6 +4506,7 @@
     "lat": 55.764434302,
     "lng": 37.562217919,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4142,6 +4518,7 @@
     "lat": 55.840819625,
     "lng": 37.486644481,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4153,6 +4530,7 @@
     "lat": 55.770803058,
     "lng": 37.622210141,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4164,6 +4542,7 @@
     "lat": 55.772500328,
     "lng": 37.659945861,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4175,6 +4554,7 @@
     "lat": 55.757119703,
     "lng": 37.575443825,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4186,6 +4566,7 @@
     "lat": 55.763993661,
     "lng": 37.655496512,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4197,6 +4578,7 @@
     "lat": 55.817741176,
     "lng": 37.496704182,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4208,6 +4590,7 @@
     "lat": 55.760483435,
     "lng": 37.580695871,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4219,6 +4602,7 @@
     "lat": 55.795121243,
     "lng": 37.552419486,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4230,6 +4614,7 @@
     "lat": 55.634651522,
     "lng": 37.656821566,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4241,6 +4626,7 @@
     "lat": 55.620673072,
     "lng": 37.670041862,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4252,6 +4638,7 @@
     "lat": 55.725653269,
     "lng": 37.589760449,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4263,6 +4650,7 @@
     "lat": 55.774879498,
     "lng": 37.58175411,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4274,6 +4662,7 @@
     "lat": 55.719118811,
     "lng": 37.58249557,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4285,6 +4674,7 @@
     "lat": 55.708147625,
     "lng": 37.586647541,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4296,6 +4686,7 @@
     "lat": 55.760253502,
     "lng": 37.581515382,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4307,6 +4698,7 @@
     "lat": 55.726689622,
     "lng": 37.57800906,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4318,6 +4710,7 @@
     "lat": 55.7607541,
     "lng": 37.581823588,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4329,6 +4722,7 @@
     "lat": 55.728415073,
     "lng": 37.636507075,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4340,6 +4734,7 @@
     "lat": 55.743359249,
     "lng": 37.497810574,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4351,6 +4746,7 @@
     "lat": 55.773825727,
     "lng": 37.544385468,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4362,6 +4758,7 @@
     "lat": 55.783734193,
     "lng": 37.718547821,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4373,6 +4770,7 @@
     "lat": 55.730440622,
     "lng": 37.509990196,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4384,6 +4782,7 @@
     "lat": 55.773330767,
     "lng": 37.544274662,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4395,6 +4794,7 @@
     "lat": 55.78049436,
     "lng": 37.632627758,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4406,6 +4806,7 @@
     "lat": 55.74776028,
     "lng": 37.681500642,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4417,6 +4818,7 @@
     "lat": 55.70493126,
     "lng": 37.768230701,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4428,6 +4830,7 @@
     "lat": 55.726646909,
     "lng": 37.450292321,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4439,6 +4842,7 @@
     "lat": 55.781206169,
     "lng": 37.63126739,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4450,6 +4854,7 @@
     "lat": 55.731953564,
     "lng": 37.664910769,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4461,6 +4866,7 @@
     "lat": 55.732256897,
     "lng": 37.667841404,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4472,6 +4878,7 @@
     "lat": 55.804661658,
     "lng": 37.40237352,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4483,6 +4890,7 @@
     "lat": 55.77187895,
     "lng": 37.62088222,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4494,6 +4902,7 @@
     "lat": 55.676772202,
     "lng": 37.505557354,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4505,6 +4914,7 @@
     "lat": 55.764470013,
     "lng": 37.63943161,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4516,6 +4926,7 @@
     "lat": 55.610486666,
     "lng": 37.718497964,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4527,6 +4938,7 @@
     "lat": 55.788379941,
     "lng": 37.784205606,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4538,6 +4950,7 @@
     "lat": 55.820604189,
     "lng": 37.500273722,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4549,6 +4962,7 @@
     "lat": 55.897348203,
     "lng": 37.58654174,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4560,6 +4974,7 @@
     "lat": 55.807928494,
     "lng": 37.798898077,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4571,6 +4986,7 @@
     "lat": 55.66244765,
     "lng": 37.481894851,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4582,6 +4998,7 @@
     "lat": 55.80515897,
     "lng": 37.744991503,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4593,6 +5010,7 @@
     "lat": 55.792549108,
     "lng": 37.678079991,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4604,6 +5022,7 @@
     "lat": 55.687299149,
     "lng": 37.573354216,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4615,6 +5034,7 @@
     "lat": 55.856222246,
     "lng": 37.479081089,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4626,6 +5046,7 @@
     "lat": 55.860840784,
     "lng": 37.435262579,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4637,6 +5058,7 @@
     "lat": 55.67024139,
     "lng": 37.554199907,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4648,6 +5070,7 @@
     "lat": 55.67688122,
     "lng": 37.506033295,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4659,6 +5082,7 @@
     "lat": 55.82745459,
     "lng": 37.439121965,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4670,6 +5094,7 @@
     "lat": 55.725525914,
     "lng": 37.68481017,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4681,6 +5106,7 @@
     "lat": 55.792197649,
     "lng": 37.635184397,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4692,6 +5118,7 @@
     "lat": 55.780166034,
     "lng": 37.66696148,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4703,6 +5130,7 @@
     "lat": 55.740369502,
     "lng": 37.414661357,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4714,6 +5142,7 @@
     "lat": 55.79232252,
     "lng": 37.636520533,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4725,6 +5154,7 @@
     "lat": 55.669919177,
     "lng": 37.553806949,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4736,6 +5166,7 @@
     "lat": 55.693771159,
     "lng": 37.534258862,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4747,6 +5178,7 @@
     "lat": 55.825021873,
     "lng": 37.436473423,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4758,6 +5190,7 @@
     "lat": 55.751275796,
     "lng": 37.784323297,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4769,6 +5202,7 @@
     "lat": 55.739894362,
     "lng": 37.483726722,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4780,6 +5214,7 @@
     "lat": 55.841041947,
     "lng": 37.485846932,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4791,6 +5226,7 @@
     "lat": 55.751817468,
     "lng": 37.817802285,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4802,6 +5238,7 @@
     "lat": 55.740530478,
     "lng": 37.415021885,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4813,6 +5250,7 @@
     "lat": 55.763115303,
     "lng": 37.641651098,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4824,6 +5262,7 @@
     "lat": 55.709011669,
     "lng": 37.732980002,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4835,6 +5274,7 @@
     "lat": 55.746058944,
     "lng": 37.67850853,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4846,6 +5286,7 @@
     "lat": 55.773306934,
     "lng": 37.653116466,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4857,6 +5298,7 @@
     "lat": 55.809726178,
     "lng": 37.462592685,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4868,6 +5310,7 @@
     "lat": 55.807678972,
     "lng": 37.465597344,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4879,6 +5322,7 @@
     "lat": 55.735432889,
     "lng": 37.517561978,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4890,6 +5334,7 @@
     "lat": 55.772038731,
     "lng": 37.633698711,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4901,6 +5346,7 @@
     "lat": 55.724172183,
     "lng": 37.461571804,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4912,6 +5358,7 @@
     "lat": 55.749075378,
     "lng": 37.599989519,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4923,6 +5370,7 @@
     "lat": 55.610409057,
     "lng": 37.71635393,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4934,6 +5382,7 @@
     "lat": 55.72687602,
     "lng": 37.625320762,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4945,6 +5394,7 @@
     "lat": 55.793410175,
     "lng": 37.617250994,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4956,6 +5406,7 @@
     "lat": 55.756995289,
     "lng": 37.598537535,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4967,6 +5418,7 @@
     "lat": 55.763261955,
     "lng": 37.641919813,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4978,6 +5430,7 @@
     "lat": 55.819232734,
     "lng": 37.640364784,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -4989,6 +5442,7 @@
     "lat": 55.748536624,
     "lng": 37.582104944,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5000,6 +5454,7 @@
     "lat": 55.792896917,
     "lng": 37.678776065,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5011,6 +5466,7 @@
     "lat": 55.747846828,
     "lng": 37.584697634,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5022,6 +5478,7 @@
     "lat": 55.69269513,
     "lng": 37.727638719,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5033,6 +5490,7 @@
     "lat": 55.60976121,
     "lng": 37.71873527,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5044,6 +5502,7 @@
     "lat": 55.808018542,
     "lng": 37.637621419,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5055,6 +5514,7 @@
     "lat": 55.781409431,
     "lng": 37.613289799,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5066,6 +5526,7 @@
     "lat": 55.644129712,
     "lng": 37.466593902,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5077,6 +5538,7 @@
     "lat": 55.581788238,
     "lng": 37.59571434,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5088,6 +5550,7 @@
     "lat": 55.705356848,
     "lng": 37.767717456,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5099,6 +5562,7 @@
     "lat": 55.716873941,
     "lng": 37.792825341,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5110,6 +5574,7 @@
     "lat": 55.68919194,
     "lng": 37.574240289,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5121,6 +5586,7 @@
     "lat": 55.708689745,
     "lng": 37.657313597,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5132,6 +5598,7 @@
     "lat": 55.704868592,
     "lng": 37.767922118,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5143,6 +5610,7 @@
     "lat": 55.845992804,
     "lng": 37.63847574,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5154,6 +5622,7 @@
     "lat": 55.734270301,
     "lng": 37.592860947,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5165,6 +5634,7 @@
     "lat": 55.706959666,
     "lng": 37.684294097,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5176,6 +5646,7 @@
     "lat": 55.766144409,
     "lng": 37.603477744,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5187,6 +5658,7 @@
     "lat": 55.676094326,
     "lng": 37.664311007,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5198,6 +5670,7 @@
     "lat": 55.772424196,
     "lng": 37.620868604,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5209,6 +5682,7 @@
     "lat": 55.836969434,
     "lng": 37.575674258,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5220,6 +5694,7 @@
     "lat": 55.707450399,
     "lng": 37.685040492,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5231,6 +5706,7 @@
     "lat": 55.885009112,
     "lng": 37.606882729,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5242,6 +5718,7 @@
     "lat": 55.853946847,
     "lng": 37.477236067,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5253,6 +5730,7 @@
     "lat": 55.742869377,
     "lng": 37.630377359,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5264,6 +5742,7 @@
     "lat": 55.69164467,
     "lng": 37.535266751,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5275,6 +5754,7 @@
     "lat": 55.807800771,
     "lng": 37.579385486,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5286,6 +5766,7 @@
     "lat": 55.751264113,
     "lng": 37.818521516,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5297,6 +5778,7 @@
     "lat": 55.769401086,
     "lng": 37.679467324,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5308,6 +5790,7 @@
     "lat": 55.766549122,
     "lng": 37.610261292,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5319,6 +5802,7 @@
     "lat": 55.717830587,
     "lng": 37.794269484,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5330,6 +5814,7 @@
     "lat": 55.85439583,
     "lng": 37.47638999,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5341,6 +5826,7 @@
     "lat": 55.751510928,
     "lng": 37.788961998,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5352,6 +5838,7 @@
     "lat": 55.773428772,
     "lng": 37.577696598,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5363,6 +5850,7 @@
     "lat": 55.744515618,
     "lng": 37.616325657,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5374,6 +5862,7 @@
     "lat": 55.870181947,
     "lng": 37.664248113,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5385,6 +5874,7 @@
     "lat": 55.718867212,
     "lng": 37.608361337,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5396,6 +5886,7 @@
     "lat": 55.640890471,
     "lng": 37.604587105,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5407,6 +5898,7 @@
     "lat": 55.897824002,
     "lng": 37.587969101,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5418,6 +5910,7 @@
     "lat": 55.820327734,
     "lng": 37.497511507,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5429,6 +5922,7 @@
     "lat": 55.740887826,
     "lng": 37.625907596,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5440,6 +5934,7 @@
     "lat": 55.796204823,
     "lng": 37.714848824,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5451,6 +5946,7 @@
     "lat": 55.774287792,
     "lng": 37.653547982,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5462,6 +5958,7 @@
     "lat": 55.63547453,
     "lng": 37.656179605,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5473,6 +5970,7 @@
     "lat": 55.822958423,
     "lng": 37.641487396,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5484,6 +5982,7 @@
     "lat": 55.787696643,
     "lng": 37.783601413,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5495,6 +5994,7 @@
     "lat": 55.826039034,
     "lng": 37.515059119,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5506,6 +6006,7 @@
     "lat": 55.807738067,
     "lng": 37.637540726,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5517,6 +6018,7 @@
     "lat": 55.772481762,
     "lng": 37.659959266,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5528,6 +6030,7 @@
     "lat": 55.709017518,
     "lng": 37.733762191,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5539,6 +6042,7 @@
     "lat": 55.801233479,
     "lng": 37.531150208,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5550,6 +6054,7 @@
     "lat": 55.858514207,
     "lng": 37.349966969,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5561,6 +6066,7 @@
     "lat": 55.81868543,
     "lng": 37.499011429,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5572,6 +6078,7 @@
     "lat": 55.738816631,
     "lng": 37.653283285,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5583,6 +6090,7 @@
     "lat": 55.676681443,
     "lng": 37.562367423,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5594,6 +6102,7 @@
     "lat": 55.620441067,
     "lng": 37.67028806,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5605,6 +6114,7 @@
     "lat": 55.852424566,
     "lng": 37.439216602,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5616,6 +6126,7 @@
     "lat": 55.718247081,
     "lng": 37.608651118,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5627,6 +6138,7 @@
     "lat": 55.791416646,
     "lng": 37.555975661,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5638,6 +6150,7 @@
     "lat": 55.777427687,
     "lng": 37.582464379,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5649,6 +6162,7 @@
     "lat": 55.827555915,
     "lng": 37.445952508,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5660,6 +6174,7 @@
     "lat": 55.793358282,
     "lng": 37.493289456,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5671,6 +6186,7 @@
     "lat": 55.851105038,
     "lng": 37.438293011,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5682,6 +6198,7 @@
     "lat": 55.88427841,
     "lng": 37.60102431,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5693,6 +6210,7 @@
     "lat": 55.793152034,
     "lng": 37.493697016,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5704,6 +6222,7 @@
     "lat": 55.788943032,
     "lng": 37.75021847,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5715,6 +6234,7 @@
     "lat": 55.777578821,
     "lng": 37.521059707,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5726,6 +6246,7 @@
     "lat": 55.711452594,
     "lng": 37.63121304,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5737,6 +6258,7 @@
     "lat": 55.63684461,
     "lng": 37.654921829,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5748,6 +6270,7 @@
     "lat": 55.682662794,
     "lng": 37.624192939,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5759,6 +6282,7 @@
     "lat": 55.698048099,
     "lng": 37.850038313,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5770,6 +6294,7 @@
     "lat": 55.731536421,
     "lng": 37.663400322,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5781,6 +6306,7 @@
     "lat": 55.828250985,
     "lng": 37.438719557,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5792,6 +6318,7 @@
     "lat": 55.72727812,
     "lng": 37.625168344,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5803,6 +6330,7 @@
     "lat": 55.735405521,
     "lng": 37.517602958,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5814,6 +6342,7 @@
     "lat": 55.736601545,
     "lng": 37.515179506,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5825,6 +6354,7 @@
     "lat": 55.65485155,
     "lng": 37.539272476,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5836,6 +6366,7 @@
     "lat": 55.641896629,
     "lng": 37.526076357,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5847,6 +6378,7 @@
     "lat": 55.754976501,
     "lng": 37.632242351,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5858,6 +6390,7 @@
     "lat": 55.654914815,
     "lng": 37.540802956,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5869,6 +6402,7 @@
     "lat": 55.674977006,
     "lng": 37.664073131,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5880,6 +6414,7 @@
     "lat": 55.756008764,
     "lng": 37.632685856,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5891,6 +6426,7 @@
     "lat": 55.796666782,
     "lng": 37.799553399,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5902,6 +6438,7 @@
     "lat": 55.74867599,
     "lng": 37.581172145,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5913,6 +6450,7 @@
     "lat": 55.751218721,
     "lng": 37.818984327,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5924,6 +6462,7 @@
     "lat": 55.662543258,
     "lng": 37.481930756,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5935,6 +6474,7 @@
     "lat": 55.73201464,
     "lng": 37.63529355,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5946,6 +6486,7 @@
     "lat": 55.662002936,
     "lng": 37.48301663,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5957,6 +6498,7 @@
     "lat": 55.734043602,
     "lng": 37.592630407,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5968,6 +6510,7 @@
     "lat": 55.731585872,
     "lng": 37.635570699,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5979,6 +6522,7 @@
     "lat": 55.75445966,
     "lng": 37.634336049,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -5990,6 +6534,7 @@
     "lat": 55.636898216,
     "lng": 37.655114777,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6001,6 +6546,7 @@
     "lat": 55.643334402,
     "lng": 37.526461994,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6012,6 +6558,7 @@
     "lat": 55.641915572,
     "lng": 37.526471425,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6023,6 +6570,7 @@
     "lat": 55.609375164,
     "lng": 37.717495121,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6034,6 +6582,7 @@
     "lat": 55.651822353,
     "lng": 37.598044989,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6045,6 +6594,7 @@
     "lat": 55.651849232,
     "lng": 37.597931351,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6056,6 +6606,7 @@
     "lat": 55.676707567,
     "lng": 37.763972532,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6067,6 +6618,7 @@
     "lat": 55.757101198,
     "lng": 37.647386437,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6078,6 +6630,7 @@
     "lat": 55.888589579,
     "lng": 37.661628617,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6089,6 +6642,7 @@
     "lat": 55.7083692,
     "lng": 37.657666505,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6100,6 +6654,7 @@
     "lat": 55.780968381,
     "lng": 37.668692735,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6111,6 +6666,7 @@
     "lat": 55.780730438,
     "lng": 37.631203744,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6122,6 +6678,7 @@
     "lat": 55.83659179,
     "lng": 37.382398678,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6133,6 +6690,7 @@
     "lat": 55.746829043,
     "lng": 37.514381807,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6144,6 +6702,7 @@
     "lat": 55.734851533,
     "lng": 37.468357645,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6155,6 +6714,7 @@
     "lat": 55.738754587,
     "lng": 37.484463003,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6166,6 +6726,7 @@
     "lat": 55.634020678,
     "lng": 37.518735495,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6177,6 +6738,7 @@
     "lat": 55.66398889,
     "lng": 37.605781601,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6188,6 +6750,7 @@
     "lat": 55.677211716,
     "lng": 37.562624267,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6199,6 +6762,7 @@
     "lat": 55.640781426,
     "lng": 37.60482119,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6210,6 +6774,7 @@
     "lat": 55.843247937,
     "lng": 37.637453148,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6221,6 +6786,7 @@
     "lat": 55.818206314,
     "lng": 37.647401158,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6232,6 +6798,7 @@
     "lat": 55.715281701,
     "lng": 37.817745433,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6243,6 +6810,7 @@
     "lat": 55.758750055,
     "lng": 37.75258087,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6254,6 +6822,7 @@
     "lat": 55.620124746,
     "lng": 37.504273429,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6265,6 +6834,7 @@
     "lat": 55.618596754,
     "lng": 37.502102751,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6276,6 +6846,7 @@
     "lat": 55.605860601,
     "lng": 37.534964497,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6287,6 +6858,7 @@
     "lat": 55.827324007,
     "lng": 37.514128646,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6298,6 +6870,7 @@
     "lat": 55.842869744,
     "lng": 37.637600884,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6309,6 +6882,7 @@
     "lat": 55.818436219,
     "lng": 37.501897818,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6320,6 +6894,7 @@
     "lat": 55.731340608,
     "lng": 37.593682877,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6331,6 +6906,7 @@
     "lat": 55.709495427,
     "lng": 37.733364469,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6342,6 +6918,7 @@
     "lat": 55.885504757,
     "lng": 37.662042575,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6353,6 +6930,7 @@
     "lat": 55.769804308,
     "lng": 37.622454589,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6364,6 +6942,7 @@
     "lat": 55.763964221,
     "lng": 37.602864206,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6375,6 +6954,7 @@
     "lat": 55.781587689,
     "lng": 37.599103662,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6386,6 +6966,7 @@
     "lat": 55.845758554,
     "lng": 37.359995359,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6397,6 +6978,7 @@
     "lat": 55.75207329,
     "lng": 37.601684625,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6408,6 +6990,7 @@
     "lat": 55.859012947,
     "lng": 37.437112392,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6419,6 +7002,7 @@
     "lat": 55.819279483,
     "lng": 37.573886945,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6430,6 +7014,7 @@
     "lat": 55.836562648,
     "lng": 37.574991675,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6441,6 +7026,7 @@
     "lat": 55.738924639,
     "lng": 37.548357375,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6452,6 +7038,7 @@
     "lat": 55.853906671,
     "lng": 37.477264664,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6463,6 +7050,7 @@
     "lat": 55.846333563,
     "lng": 37.359106945,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6474,6 +7062,7 @@
     "lat": 55.731296374,
     "lng": 37.447434413,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6485,6 +7074,7 @@
     "lat": 55.846060393,
     "lng": 37.58873099,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6496,6 +7086,7 @@
     "lat": 55.609439797,
     "lng": 37.721106405,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6507,6 +7098,7 @@
     "lat": 55.664555644,
     "lng": 37.483320256,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6518,6 +7110,7 @@
     "lat": 55.716625544,
     "lng": 37.81885879,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6529,6 +7122,7 @@
     "lat": 55.818393308,
     "lng": 37.572889932,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6540,6 +7134,7 @@
     "lat": 55.716427846,
     "lng": 37.819435707,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6551,6 +7146,7 @@
     "lat": 55.714608645,
     "lng": 37.821026091,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6562,6 +7158,7 @@
     "lat": 55.738771392,
     "lng": 37.42159428,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6573,6 +7170,7 @@
     "lat": 55.718108668,
     "lng": 37.67587026,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6584,6 +7182,7 @@
     "lat": 55.870768617,
     "lng": 37.664606399,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6595,6 +7194,7 @@
     "lat": 55.76401555,
     "lng": 37.60309719,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6606,6 +7206,7 @@
     "lat": 55.793525619,
     "lng": 37.614554522,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6617,6 +7218,7 @@
     "lat": 55.747481209,
     "lng": 37.583757485,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6628,6 +7230,7 @@
     "lat": 55.741063581,
     "lng": 37.626422711,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6639,6 +7242,7 @@
     "lat": 55.850538045,
     "lng": 37.440373906,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6650,6 +7254,7 @@
     "lat": 55.710425838,
     "lng": 37.622524086,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6661,6 +7266,7 @@
     "lat": 55.620928062,
     "lng": 37.608535726,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6672,6 +7278,7 @@
     "lat": 55.721912457,
     "lng": 37.561436865,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6683,6 +7290,7 @@
     "lat": 55.747785026,
     "lng": 37.64606562,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6694,6 +7302,7 @@
     "lat": 55.817997206,
     "lng": 37.574592745,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6705,6 +7314,7 @@
     "lat": 55.654463593,
     "lng": 37.648355438,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6716,6 +7326,7 @@
     "lat": 55.766401353,
     "lng": 37.609947965,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6727,6 +7338,7 @@
     "lat": 55.612050116,
     "lng": 37.697151987,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6738,6 +7350,7 @@
     "lat": 55.708838743,
     "lng": 37.658046991,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6749,6 +7362,7 @@
     "lat": 55.742890757,
     "lng": 37.86454327,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6760,6 +7374,7 @@
     "lat": 55.690947359,
     "lng": 37.756220841,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6771,6 +7386,7 @@
     "lat": 55.671329808,
     "lng": 37.556161917,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6782,6 +7398,7 @@
     "lat": 55.67684742,
     "lng": 37.672193188,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6793,6 +7410,7 @@
     "lat": 55.634890126,
     "lng": 37.519329946,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6804,6 +7422,7 @@
     "lat": 55.699175031,
     "lng": 37.764984607,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6815,6 +7434,7 @@
     "lat": 55.653301245,
     "lng": 37.617541814,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6826,6 +7446,7 @@
     "lat": 55.862586116,
     "lng": 37.603532328,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6837,6 +7458,7 @@
     "lat": 55.86421115,
     "lng": 37.60545521,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6848,6 +7470,7 @@
     "lat": 55.815011622,
     "lng": 37.734209066,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6859,6 +7482,7 @@
     "lat": 55.824592219,
     "lng": 37.652898704,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6870,6 +7494,7 @@
     "lat": 55.686060218,
     "lng": 37.572193332,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6881,6 +7506,7 @@
     "lat": 55.611754901,
     "lng": 37.695831011,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6892,6 +7518,7 @@
     "lat": 55.613714953,
     "lng": 37.603588436,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6903,6 +7530,7 @@
     "lat": 55.799962015,
     "lng": 37.534388378,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6914,6 +7542,7 @@
     "lat": 55.692484025,
     "lng": 37.535423254,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6925,6 +7554,7 @@
     "lat": 55.804633504,
     "lng": 37.514307031,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6936,6 +7566,7 @@
     "lat": 55.808747086,
     "lng": 37.461088612,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 05:00-01:00"
@@ -6947,6 +7578,7 @@
     "lat": 55.620879832,
     "lng": 37.64625869,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -6958,6 +7590,7 @@
     "lat": 55.68547691,
     "lng": 37.709214014,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-21:00"
@@ -6969,6 +7602,7 @@
     "lat": 55.673897904,
     "lng": 37.688436917,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-21:00"
@@ -6980,6 +7614,7 @@
     "lat": 55.845215188,
     "lng": 37.516225496,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -6991,6 +7626,7 @@
     "lat": 55.845266729,
     "lng": 37.510264543,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7002,6 +7638,7 @@
     "lat": 55.840187719,
     "lng": 37.511643754,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7013,6 +7650,7 @@
     "lat": 55.867912833,
     "lng": 37.508869955,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7024,6 +7662,7 @@
     "lat": 55.842266349,
     "lng": 37.638767179,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7035,6 +7674,7 @@
     "lat": 55.621373388,
     "lng": 37.656580638,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7046,6 +7686,7 @@
     "lat": 55.699576162,
     "lng": 37.660763888,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7057,6 +7698,7 @@
     "lat": 55.698788613,
     "lng": 37.612634661,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7068,6 +7710,7 @@
     "lat": 55.695927111,
     "lng": 37.607257355,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7079,6 +7722,7 @@
     "lat": 55.655327403,
     "lng": 37.752984825,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7090,6 +7734,7 @@
     "lat": 55.653251562,
     "lng": 37.753511553,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7101,6 +7746,7 @@
     "lat": 55.653705698,
     "lng": 37.780558469,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7112,6 +7758,7 @@
     "lat": 55.650738141,
     "lng": 37.783796683,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7123,6 +7770,7 @@
     "lat": 55.572729449,
     "lng": 37.57630173,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7134,6 +7782,7 @@
     "lat": 55.574627165,
     "lng": 37.569997772,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7145,6 +7794,7 @@
     "lat": 55.57510925,
     "lng": 37.570187767,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7156,6 +7806,7 @@
     "lat": 55.574306339,
     "lng": 37.649896511,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7167,6 +7818,7 @@
     "lat": 55.573683051,
     "lng": 37.64695316,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7178,6 +7830,7 @@
     "lat": 55.987728609,
     "lng": 37.219501921,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7189,6 +7842,7 @@
     "lat": 55.989054383,
     "lng": 37.218249827,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7200,6 +7854,7 @@
     "lat": 55.989172393,
     "lng": 37.213661271,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7211,6 +7866,7 @@
     "lat": 55.654877712,
     "lng": 37.674320928,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7222,6 +7878,7 @@
     "lat": 55.654091673,
     "lng": 37.673237183,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7233,6 +7890,7 @@
     "lat": 55.849783508,
     "lng": 37.630870473,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7244,6 +7902,7 @@
     "lat": 55.852935822,
     "lng": 37.631395378,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7255,6 +7914,7 @@
     "lat": 55.854054416,
     "lng": 37.637323382,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7266,6 +7926,7 @@
     "lat": 55.855701256,
     "lng": 37.637843536,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7277,6 +7938,7 @@
     "lat": 55.761712751,
     "lng": 37.687663042,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7288,6 +7950,7 @@
     "lat": 55.764220578,
     "lng": 37.692540413,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7299,6 +7962,7 @@
     "lat": 55.766163668,
     "lng": 37.690193234,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7310,6 +7974,7 @@
     "lat": 55.76426837,
     "lng": 37.689366782,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7321,6 +7986,7 @@
     "lat": 55.866838902,
     "lng": 37.551505723,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7332,6 +7998,7 @@
     "lat": 55.866064493,
     "lng": 37.552114451,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7343,6 +8010,7 @@
     "lat": 55.864741154,
     "lng": 37.552227002,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7354,6 +8022,7 @@
     "lat": 55.8010714,
     "lng": 37.734744341,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7365,6 +8034,7 @@
     "lat": 55.805388498,
     "lng": 37.73530303,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7376,6 +8046,7 @@
     "lat": 55.532993447,
     "lng": 37.504174448,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7387,6 +8058,7 @@
     "lat": 55.542315617,
     "lng": 37.537426387,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7398,6 +8070,7 @@
     "lat": 55.686056243,
     "lng": 37.716528982,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7409,6 +8082,7 @@
     "lat": 55.679928577,
     "lng": 37.715698622,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7420,6 +8094,7 @@
     "lat": 55.679968442,
     "lng": 37.715879002,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7431,6 +8106,7 @@
     "lat": 55.63122563,
     "lng": 37.769478439,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7442,6 +8118,7 @@
     "lat": 55.631182935,
     "lng": 37.769402383,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7453,6 +8130,7 @@
     "lat": 55.63069341,
     "lng": 37.765393103,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7464,6 +8142,7 @@
     "lat": 55.630693472,
     "lng": 37.765364692,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7475,6 +8154,7 @@
     "lat": 55.629807439,
     "lng": 37.763815086,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7486,6 +8166,7 @@
     "lat": 55.629758024,
     "lng": 37.763748464,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7497,6 +8178,7 @@
     "lat": 55.629582196,
     "lng": 37.758889176,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7508,6 +8190,7 @@
     "lat": 55.629537966,
     "lng": 37.758903089,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7519,6 +8202,7 @@
     "lat": 55.630737767,
     "lng": 37.757144795,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7530,6 +8214,7 @@
     "lat": 55.630676333,
     "lng": 37.757059161,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7541,6 +8226,7 @@
     "lat": 55.631664632,
     "lng": 37.74936612,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7552,6 +8238,7 @@
     "lat": 55.631637844,
     "lng": 37.74936595,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7563,6 +8250,7 @@
     "lat": 55.632159172,
     "lng": 37.745903018,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7574,6 +8262,7 @@
     "lat": 55.632110877,
     "lng": 37.745940598,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7585,6 +8274,7 @@
     "lat": 55.63224996,
     "lng": 37.740647385,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7596,6 +8286,7 @@
     "lat": 55.632217684,
     "lng": 37.740713482,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7607,6 +8298,7 @@
     "lat": 55.631837724,
     "lng": 37.734962539,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7618,6 +8310,7 @@
     "lat": 55.631805579,
     "lng": 37.734962347,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7629,6 +8322,7 @@
     "lat": 55.644730135,
     "lng": 37.769258542,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7640,6 +8334,7 @@
     "lat": 55.644917326,
     "lng": 37.771836672,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7651,6 +8346,7 @@
     "lat": 55.645630182,
     "lng": 37.778871221,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7662,6 +8358,7 @@
     "lat": 55.634746567,
     "lng": 37.782165662,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7673,6 +8370,7 @@
     "lat": 55.63552508,
     "lng": 37.779102514,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7684,6 +8382,7 @@
     "lat": 55.629974244,
     "lng": 37.783892801,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7695,6 +8394,7 @@
     "lat": 55.628343999,
     "lng": 37.784543893,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7706,6 +8406,7 @@
     "lat": 55.62714026,
     "lng": 37.781467081,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7717,6 +8418,7 @@
     "lat": 55.616606265,
     "lng": 37.605270296,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7728,6 +8430,7 @@
     "lat": 55.616770594,
     "lng": 37.600991709,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7739,6 +8442,7 @@
     "lat": 55.61774877,
     "lng": 37.586452744,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7750,6 +8454,7 @@
     "lat": 55.606451023,
     "lng": 37.604987542,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7761,6 +8466,7 @@
     "lat": 55.60628615,
     "lng": 37.593563631,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7772,6 +8478,7 @@
     "lat": 55.607917832,
     "lng": 37.573521196,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7783,6 +8490,7 @@
     "lat": 55.606556811,
     "lng": 37.598566219,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7794,6 +8502,7 @@
     "lat": 55.628140532,
     "lng": 37.660414416,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7805,6 +8514,7 @@
     "lat": 55.596628583,
     "lng": 37.373151213,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7816,6 +8526,7 @@
     "lat": 55.597165326,
     "lng": 37.374095698,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7827,6 +8538,7 @@
     "lat": 55.59866415,
     "lng": 37.378084083,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -7838,6 +8550,7 @@
     "lat": 55.734070836,
     "lng": 37.515362598,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7849,6 +8562,7 @@
     "lat": 55.734124395,
     "lng": 37.515495553,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7860,6 +8574,7 @@
     "lat": 55.732844342,
     "lng": 37.511858482,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7871,6 +8586,7 @@
     "lat": 55.732828281,
     "lng": 37.511744538,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7882,6 +8598,7 @@
     "lat": 55.732568501,
     "lng": 37.511070324,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7893,6 +8610,7 @@
     "lat": 55.732603325,
     "lng": 37.511070333,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7904,6 +8622,7 @@
     "lat": 55.726675672,
     "lng": 37.500701807,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7915,6 +8634,7 @@
     "lat": 55.727755206,
     "lng": 37.497720806,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -7926,6 +8646,7 @@
     "lat": 55.756251147,
     "lng": 37.617132577,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7937,6 +8658,7 @@
     "lat": 55.756206884,
     "lng": 37.617198948,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7948,6 +8670,7 @@
     "lat": 55.754406832,
     "lng": 37.634278049,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7959,6 +8682,7 @@
     "lat": 55.750382768,
     "lng": 37.594397635,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7970,6 +8694,7 @@
     "lat": 55.749189476,
     "lng": 37.590704424,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7981,6 +8706,7 @@
     "lat": 55.765294368,
     "lng": 37.606064759,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -7992,6 +8718,7 @@
     "lat": 55.75915575,
     "lng": 37.625797007,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8003,6 +8730,7 @@
     "lat": 55.75757315,
     "lng": 37.619882316,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8014,6 +8742,7 @@
     "lat": 55.757638543,
     "lng": 37.620124792,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8025,6 +8754,7 @@
     "lat": 55.762327586,
     "lng": 37.611033934,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8036,6 +8766,7 @@
     "lat": 55.75932812,
     "lng": 37.612405366,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8047,6 +8778,7 @@
     "lat": 55.750601142,
     "lng": 37.62488507,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8058,6 +8790,7 @@
     "lat": 55.756635077,
     "lng": 37.630899492,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8069,6 +8802,7 @@
     "lat": 55.761505343,
     "lng": 37.624179747,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8080,6 +8814,7 @@
     "lat": 55.749983416,
     "lng": 37.642917681,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8091,6 +8826,7 @@
     "lat": 55.768018368,
     "lng": 37.613071286,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8102,6 +8838,7 @@
     "lat": 55.753159006,
     "lng": 37.647287209,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8113,6 +8850,7 @@
     "lat": 55.745398055,
     "lng": 37.620766418,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8124,6 +8862,7 @@
     "lat": 55.74656065,
     "lng": 37.599563185,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8135,6 +8874,7 @@
     "lat": 55.745386696,
     "lng": 37.600533771,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8146,6 +8886,7 @@
     "lat": 55.755563233,
     "lng": 37.59984917,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8157,6 +8898,7 @@
     "lat": 55.767280294,
     "lng": 37.620634368,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8168,6 +8910,7 @@
     "lat": 55.766623414,
     "lng": 37.631636993,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8179,6 +8922,7 @@
     "lat": 55.803272627,
     "lng": 37.735119048,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8190,6 +8934,7 @@
     "lat": 55.806286278,
     "lng": 37.733691265,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8201,6 +8946,7 @@
     "lat": 55.803226984,
     "lng": 37.730933454,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8212,6 +8958,7 @@
     "lat": 55.649217978,
     "lng": 37.394166796,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8223,6 +8970,7 @@
     "lat": 55.865273873,
     "lng": 37.634057031,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8234,6 +8982,7 @@
     "lat": 55.865222592,
     "lng": 37.634409361,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8245,6 +8994,7 @@
     "lat": 55.868992716,
     "lng": 37.647437824,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8256,6 +9006,7 @@
     "lat": 55.869014146,
     "lng": 37.647437905,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8267,6 +9018,7 @@
     "lat": 55.874792714,
     "lng": 37.6829479,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8278,6 +9030,7 @@
     "lat": 55.640788224,
     "lng": 37.787144711,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8289,6 +9042,7 @@
     "lat": 55.635453668,
     "lng": 37.78784595,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8300,6 +9054,7 @@
     "lat": 55.634846541,
     "lng": 37.787565004,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8311,6 +9066,7 @@
     "lat": 55.632833765,
     "lng": 37.788500505,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8322,6 +9078,7 @@
     "lat": 55.631897184,
     "lng": 37.790952803,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8333,6 +9090,7 @@
     "lat": 55.628282835,
     "lng": 37.792327534,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8344,6 +9102,7 @@
     "lat": 55.801676694,
     "lng": 37.730553319,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8355,6 +9114,7 @@
     "lat": 55.800707745,
     "lng": 37.73439974,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8366,6 +9126,7 @@
     "lat": 55.868747178,
     "lng": 37.591278417,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8377,6 +9138,7 @@
     "lat": 55.687443287,
     "lng": 37.747985475,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8388,6 +9150,7 @@
     "lat": 55.660001654,
     "lng": 37.768264011,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8399,6 +9162,7 @@
     "lat": 55.662479433,
     "lng": 37.771977357,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8410,6 +9174,7 @@
     "lat": 55.626179283,
     "lng": 37.662707407,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8421,6 +9186,7 @@
     "lat": 55.696141287,
     "lng": 37.732995637,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8432,6 +9198,7 @@
     "lat": 55.937702208,
     "lng": 37.553093609,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8443,6 +9210,7 @@
     "lat": 55.937746338,
     "lng": 37.553251161,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8454,6 +9222,7 @@
     "lat": 55.797981526,
     "lng": 37.606234863,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8465,6 +9234,7 @@
     "lat": 55.64279069,
     "lng": 37.650129618,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8476,6 +9246,7 @@
     "lat": 55.642520499,
     "lng": 37.652004256,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8487,6 +9258,7 @@
     "lat": 55.6412767,
     "lng": 37.654803384,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8498,6 +9270,7 @@
     "lat": 55.6412767,
     "lng": 37.654803384,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8509,6 +9282,7 @@
     "lat": 55.765238488,
     "lng": 37.606147966,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8520,6 +9294,7 @@
     "lat": 55.734906408,
     "lng": 37.593578481,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8531,6 +9306,7 @@
     "lat": 55.760093437,
     "lng": 37.57676517,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8542,6 +9318,7 @@
     "lat": 55.74256345,
     "lng": 37.628765187,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8553,6 +9330,7 @@
     "lat": 55.769816235,
     "lng": 37.650541579,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8564,6 +9342,7 @@
     "lat": 55.768480189,
     "lng": 37.647789884,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8575,6 +9354,7 @@
     "lat": 55.758533856,
     "lng": 37.658564611,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -8586,6 +9366,7 @@
     "lat": 55.690596175,
     "lng": 37.750661159,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8597,6 +9378,7 @@
     "lat": 55.737198182,
     "lng": 37.755760047,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8608,6 +9390,7 @@
     "lat": 55.879879259,
     "lng": 37.456129289,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8619,6 +9402,7 @@
     "lat": 55.878127436,
     "lng": 37.456302808,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8630,6 +9414,7 @@
     "lat": 55.874634034,
     "lng": 37.455334715,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8641,6 +9426,7 @@
     "lat": 55.832664394,
     "lng": 37.522007951,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8652,6 +9438,7 @@
     "lat": 55.815824307,
     "lng": 37.566862279,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8663,6 +9450,7 @@
     "lat": 55.816854521,
     "lng": 37.571212579,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8674,6 +9462,7 @@
     "lat": 55.704980033,
     "lng": 37.818309409,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8685,6 +9474,7 @@
     "lat": 55.764770002,
     "lng": 37.705599855,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8696,6 +9486,7 @@
     "lat": 55.706549135,
     "lng": 37.927099897,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8707,6 +9498,7 @@
     "lat": 55.705501384,
     "lng": 37.92642428,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8718,6 +9510,7 @@
     "lat": 55.70584956,
     "lng": 37.928752752,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8729,6 +9522,7 @@
     "lat": 55.704819182,
     "lng": 37.928642232,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8740,6 +9534,7 @@
     "lat": 55.748449329,
     "lng": 37.636472366,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8751,6 +9546,7 @@
     "lat": 55.945436316,
     "lng": 37.351192238,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8762,6 +9558,7 @@
     "lat": 55.744013097,
     "lng": 37.571953535,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8773,6 +9570,7 @@
     "lat": 55.730160327,
     "lng": 37.654768136,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -8784,6 +9582,7 @@
     "lat": 55.760459146,
     "lng": 37.808404388,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8795,6 +9594,7 @@
     "lat": 55.765366902,
     "lng": 37.821899232,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8806,6 +9606,7 @@
     "lat": 55.735148575,
     "lng": 37.814215444,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8817,6 +9618,7 @@
     "lat": 55.849790146,
     "lng": 37.646374656,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8828,6 +9630,7 @@
     "lat": 55.85250597,
     "lng": 37.639822759,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8839,6 +9642,7 @@
     "lat": 55.633615143,
     "lng": 37.586961245,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8850,6 +9654,7 @@
     "lat": 55.628460295,
     "lng": 37.588048307,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8861,6 +9666,7 @@
     "lat": 55.619699136,
     "lng": 37.582310239,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8872,6 +9678,7 @@
     "lat": 55.619057559,
     "lng": 37.580282865,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8883,6 +9690,7 @@
     "lat": 55.615809824,
     "lng": 37.581771953,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8894,6 +9702,7 @@
     "lat": 55.614156579,
     "lng": 37.578284932,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8905,6 +9714,7 @@
     "lat": 55.595600589,
     "lng": 37.581843431,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8916,6 +9726,7 @@
     "lat": 55.595116704,
     "lng": 37.586933871,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8927,6 +9738,7 @@
     "lat": 55.59518858,
     "lng": 37.592353468,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8938,6 +9750,7 @@
     "lat": 55.584163979,
     "lng": 37.593889335,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8949,6 +9762,7 @@
     "lat": 55.569564071,
     "lng": 37.560003736,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8960,6 +9774,7 @@
     "lat": 55.58524625,
     "lng": 37.547408995,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8971,6 +9786,7 @@
     "lat": 55.597553408,
     "lng": 37.558570376,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8982,6 +9798,7 @@
     "lat": 55.864475737,
     "lng": 37.654508821,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -8993,6 +9810,7 @@
     "lat": 55.899590031,
     "lng": 37.606221688,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -9004,6 +9822,7 @@
     "lat": 55.898911213,
     "lng": 37.607492817,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -9015,6 +9834,7 @@
     "lat": 55.689799441,
     "lng": 37.924489218,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -9026,6 +9846,7 @@
     "lat": 55.728351715,
     "lng": 37.779023937,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -9037,6 +9858,7 @@
     "lat": 55.673424056,
     "lng": 37.717416731,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-20:00"
@@ -9048,6 +9870,7 @@
     "lat": 55.614193488,
     "lng": 37.758295507,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9059,6 +9882,7 @@
     "lat": 55.766467301,
     "lng": 37.814362788,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9070,6 +9894,7 @@
     "lat": 55.762989967,
     "lng": 37.814467839,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9081,6 +9906,7 @@
     "lat": 55.630816528,
     "lng": 37.791408839,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9092,6 +9918,7 @@
     "lat": 55.815734791,
     "lng": 37.478257403,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9103,6 +9930,7 @@
     "lat": 55.815682566,
     "lng": 37.478319281,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9114,6 +9942,7 @@
     "lat": 55.817566075,
     "lng": 37.473270233,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9125,6 +9954,7 @@
     "lat": 55.822778809,
     "lng": 37.467266305,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9136,6 +9966,7 @@
     "lat": 55.8221587,
     "lng": 37.47986215,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9147,6 +9978,7 @@
     "lat": 55.824643229,
     "lng": 37.491243544,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9158,6 +9990,7 @@
     "lat": 55.811006851,
     "lng": 37.466538835,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9169,6 +10002,7 @@
     "lat": 55.811844935,
     "lng": 37.476566045,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9180,6 +10014,7 @@
     "lat": 55.807949772,
     "lng": 37.475246042,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9191,6 +10026,7 @@
     "lat": 55.804764764,
     "lng": 37.47223975,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9202,6 +10038,7 @@
     "lat": 55.806970906,
     "lng": 37.484883304,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9213,6 +10050,7 @@
     "lat": 55.690699767,
     "lng": 37.671767688,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9224,6 +10062,7 @@
     "lat": 55.692238238,
     "lng": 37.676839485,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9235,6 +10074,7 @@
     "lat": 55.606686461,
     "lng": 37.744352313,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9246,6 +10086,7 @@
     "lat": 55.854902814,
     "lng": 37.590393481,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9257,6 +10098,7 @@
     "lat": 55.610596086,
     "lng": 37.76444331,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9268,6 +10110,7 @@
     "lat": 55.611964895,
     "lng": 37.768182028,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9279,6 +10122,7 @@
     "lat": 55.610836202,
     "lng": 37.742901507,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9290,6 +10134,7 @@
     "lat": 55.610871657,
     "lng": 37.746612195,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9301,6 +10146,7 @@
     "lat": 55.612239273,
     "lng": 37.761453707,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9312,6 +10158,7 @@
     "lat": 55.531315986,
     "lng": 37.51164632,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9323,6 +10170,7 @@
     "lat": 55.531283801,
     "lng": 37.512043056,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9334,6 +10182,7 @@
     "lat": 55.638330465,
     "lng": 37.7435926,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9345,6 +10194,7 @@
     "lat": 55.628400991,
     "lng": 37.52490438,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9356,6 +10206,7 @@
     "lat": 55.631403845,
     "lng": 37.53611924,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9367,6 +10218,7 @@
     "lat": 55.57399909,
     "lng": 37.576521695,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9378,6 +10230,7 @@
     "lat": 55.607243897,
     "lng": 37.588057527,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9389,6 +10242,7 @@
     "lat": 55.612445749,
     "lng": 37.580332351,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9400,6 +10254,7 @@
     "lat": 55.604517194,
     "lng": 37.622026904,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9411,6 +10266,7 @@
     "lat": 55.604811859,
     "lng": 37.624696666,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9422,6 +10278,7 @@
     "lat": 55.603140534,
     "lng": 37.624426381,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9433,6 +10290,7 @@
     "lat": 55.802744917,
     "lng": 37.562492883,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9444,6 +10302,7 @@
     "lat": 55.61712934,
     "lng": 37.681433452,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9455,6 +10314,7 @@
     "lat": 55.634514931,
     "lng": 37.733008559,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9466,6 +10326,7 @@
     "lat": 55.642663462,
     "lng": 37.605046542,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9477,6 +10338,7 @@
     "lat": 55.63622237,
     "lng": 37.381746699,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9488,6 +10350,7 @@
     "lat": 55.676608371,
     "lng": 37.652108012,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9499,6 +10362,7 @@
     "lat": 55.674961768,
     "lng": 37.653561683,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9510,6 +10374,7 @@
     "lat": 55.608577727,
     "lng": 37.652469191,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9521,6 +10386,7 @@
     "lat": 55.663926656,
     "lng": 37.668655243,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9532,6 +10398,7 @@
     "lat": 55.657030924,
     "lng": 37.656874606,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9543,6 +10410,7 @@
     "lat": 55.657071621,
     "lng": 37.656995596,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9554,6 +10422,7 @@
     "lat": 55.736446403,
     "lng": 37.866899494,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9565,6 +10434,7 @@
     "lat": 55.644045076,
     "lng": 37.333664292,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9576,6 +10446,7 @@
     "lat": 55.761684164,
     "lng": 37.403288524,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9587,6 +10458,7 @@
     "lat": 55.791460574,
     "lng": 37.762282298,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9598,6 +10470,7 @@
     "lat": 55.791346627,
     "lng": 37.762329078,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9609,6 +10482,7 @@
     "lat": 55.651609949,
     "lng": 37.462818202,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9620,6 +10494,7 @@
     "lat": 55.679590727,
     "lng": 37.698420451,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9631,6 +10506,7 @@
     "lat": 55.673483315,
     "lng": 37.406571246,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9642,6 +10518,7 @@
     "lat": 55.673530576,
     "lng": 37.406652199,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9653,6 +10530,7 @@
     "lat": 55.673572865,
     "lng": 37.406743794,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9664,6 +10542,7 @@
     "lat": 55.673635618,
     "lng": 37.40687148,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9675,6 +10554,7 @@
     "lat": 55.65523277,
     "lng": 37.651414563,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9686,6 +10566,7 @@
     "lat": 55.759365916,
     "lng": 37.559778415,
     "type": "FREE",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9697,6 +10578,7 @@
     "lat": 55.63762524,
     "lng": 37.490981726,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9708,6 +10590,7 @@
     "lat": 55.63757373,
     "lng": 37.491218508,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9719,6 +10602,7 @@
     "lat": 55.637546198,
     "lng": 37.491264855,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9730,6 +10614,7 @@
     "lat": 55.637480459,
     "lng": 37.49143323,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9741,6 +10626,7 @@
     "lat": 55.588006953,
     "lng": 37.54763168,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9752,6 +10638,7 @@
     "lat": 55.649072178,
     "lng": 37.486291777,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9763,6 +10650,7 @@
     "lat": 55.726850581,
     "lng": 37.542581714,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9774,6 +10662,7 @@
     "lat": 55.711906211,
     "lng": 37.545882073,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9785,6 +10674,7 @@
     "lat": 55.85169614,
     "lng": 37.650810646,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9796,6 +10686,7 @@
     "lat": 55.881956757,
     "lng": 37.49986891,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9807,6 +10698,7 @@
     "lat": 55.868021416,
     "lng": 37.613554797,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9818,6 +10710,7 @@
     "lat": 55.541348068,
     "lng": 37.556823925,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9829,6 +10722,7 @@
     "lat": 55.691023205,
     "lng": 37.675025975,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9840,6 +10734,7 @@
     "lat": 55.691989394,
     "lng": 37.67533716,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9851,6 +10746,7 @@
     "lat": 55.692075342,
     "lng": 37.672468424,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9862,6 +10758,7 @@
     "lat": 55.648781678,
     "lng": 37.768280166,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9873,6 +10770,7 @@
     "lat": 55.742351628,
     "lng": 37.814504884,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9884,6 +10782,7 @@
     "lat": 55.738861022,
     "lng": 37.794433592,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9895,6 +10794,7 @@
     "lat": 55.725285638,
     "lng": 37.799876538,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9906,6 +10806,7 @@
     "lat": 55.736125208,
     "lng": 37.785980065,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9917,6 +10818,7 @@
     "lat": 55.731569043,
     "lng": 37.802503386,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9928,6 +10830,7 @@
     "lat": 55.740825642,
     "lng": 37.815171639,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9939,6 +10842,7 @@
     "lat": 55.72928455,
     "lng": 37.806240677,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9950,6 +10854,7 @@
     "lat": 55.736427792,
     "lng": 37.803401998,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9961,6 +10866,7 @@
     "lat": 55.873504542,
     "lng": 37.649694956,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9972,6 +10878,7 @@
     "lat": 55.721475308,
     "lng": 37.506813313,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9983,6 +10890,7 @@
     "lat": 55.890097737,
     "lng": 37.659842909,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -9994,6 +10902,7 @@
     "lat": 55.769432469,
     "lng": 37.595403559,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -10005,6 +10914,7 @@
     "lat": 55.741259047,
     "lng": 37.65632203,
     "type": "PAID",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -10016,6 +10926,7 @@
     "lat": 55.750378542,
     "lng": 37.624725982,
     "type": "PAID",
+    "mobile": true,
     "accessible": false,
     "rating": 0.0,
     "workingHours": "понедельник: 00:00-23:59"
@@ -10027,6 +10938,7 @@
     "lat": 55.889577229,
     "lng": 37.564792531,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -10038,6 +10950,7 @@
     "lat": 55.863753627,
     "lng": 37.552147259,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"
@@ -10049,6 +10962,7 @@
     "lat": 55.605433732,
     "lng": 37.411745046,
     "type": "FREE",
+    "mobile": true,
     "accessible": true,
     "rating": 0.0,
     "workingHours": "понедельник: 08:00-22:00"

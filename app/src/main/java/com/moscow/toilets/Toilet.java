@@ -9,7 +9,8 @@ public class Toilet implements Serializable {
     public String address;
     public double lat;
     public double lng;
-    public String type;          // FREE / PAID / TROIKA / MALL
+    public String type;          // FREE / PAID
+    public boolean mobile;       // true = передвижной модуль, false = стационарный
     public Boolean accessible;
     public double rating;
     public String workingHours;
