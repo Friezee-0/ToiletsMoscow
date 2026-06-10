@@ -6,6 +6,9 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -43,8 +46,11 @@ import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKitFactory;
 import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.map.CameraPosition;
+import com.yandex.mapkit.map.Cluster;
+import com.yandex.mapkit.map.ClusterListener;
+import com.yandex.mapkit.map.ClusterTapListener;
+import com.yandex.mapkit.map.ClusterizedPlacemarkCollection;
 import com.yandex.mapkit.map.Map;
-import com.yandex.mapkit.map.MapObjectCollection;
 import com.yandex.mapkit.map.MapObjectTapListener;
 import com.yandex.mapkit.map.PlacemarkMapObject;
 import com.yandex.mapkit.mapview.MapView;
@@ -68,9 +74,10 @@ public class MainActivity extends AppCompatActivity {
     // Карта
     private MapView mapView;
     private Map map;
-    private MapObjectCollection toiletsCollection;
+    private ClusterizedPlacemarkCollection toiletsCollection;
     private UserLocationLayer userLocationLayer;
     private final java.util.Map<Integer, ImageProvider> iconCache = new HashMap<>();
+    private final java.util.Map<Integer, ImageProvider> clusterIconCache = new HashMap<>();
 
     // Список
     private RecyclerView recyclerView;
@@ -116,6 +123,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+    private final ClusterListener clusterListener = cluster -> {
+        int size = cluster.getSize();
+        cluster.getAppearance().setIcon(getClusterIcon(size));
+        cluster.addClusterTapListener(clusterTapListener);
+    };
+
+    private final ClusterTapListener clusterTapListener = cluster -> {
+        map.move(
+            map.cameraPositionForGeometry(cluster.getBounds()),
+            new Animation(Animation.Type.SMOOTH, 0.4f),
+            null
+        );
+        return true;
+    };
+
     private final MapObjectTapListener markerTapListener = (mapObject, point) -> {
         if (mapObject.getUserData() instanceof Toilet) {
             showToiletBottomSheet((Toilet) mapObject.getUserData());
@@ -140,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         // Карта
         mapView           = findViewById(R.id.mapview);
         map               = mapView.getMapWindow().getMap();
-        toiletsCollection = map.getMapObjects().addCollection();
+        toiletsCollection = map.getMapObjects().addClusterizedPlacemarkCollection(clusterListener);
         userLocationLayer = MapKitFactory.getInstance()
                 .createUserLocationLayer(mapView.getMapWindow());
         userLocationLayer.setVisible(true);
@@ -528,6 +550,46 @@ public class MainActivity extends AppCompatActivity {
             p.setUserData(t);
             p.addTapListener(markerTapListener);
         }
+        // clusterRadius px — расстояние на экране для слияния; minZoom — ниже этого зума кластеры активны
+        toiletsCollection.clusterPlacemarks(60, 15);
+    }
+
+    private ImageProvider getClusterIcon(int size) {
+        // Round size to bucket for cache efficiency
+        int bucket = size < 10 ? size : (size < 50 ? (size / 10) * 10 : (size / 50) * 50);
+        ImageProvider cached = clusterIconCache.get(bucket);
+        if (cached != null) return cached;
+
+        int dim = 96;
+        Bitmap bmp = Bitmap.createBitmap(dim, dim, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bmp);
+
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        // Outer ring
+        int ringColor = size < 10 ? 0xFF2E7D32   // green
+                      : size < 50 ? 0xFFE65100   // deep orange
+                                  : 0xFFC62828;  // red
+        paint.setColor(ringColor);
+        canvas.drawCircle(dim / 2f, dim / 2f, dim / 2f, paint);
+
+        // Inner white fill
+        paint.setColor(Color.WHITE);
+        canvas.drawCircle(dim / 2f, dim / 2f, dim / 2f - 7, paint);
+
+        // Count text
+        paint.setColor(ringColor);
+        paint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+        paint.setTextAlign(Paint.Align.CENTER);
+        String label = size > 999 ? "999+" : String.valueOf(size);
+        paint.setTextSize(label.length() <= 2 ? 36 : label.length() == 3 ? 28 : 22);
+        // Vertical centre adjustment
+        float textY = dim / 2f - (paint.descent() + paint.ascent()) / 2f;
+        canvas.drawText(label, dim / 2f, textY, paint);
+
+        ImageProvider provider = ImageProvider.fromBitmap(bmp);
+        clusterIconCache.put(bucket, provider);
+        return provider;
     }
 
     private ImageProvider getMarkerIcon(String type) {
